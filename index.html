@@ -1,185 +1,144 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Money Talks: Financial Guide for Young Adults</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Talks | SLC Financial Literacy Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body class="light">
-  <header>
-    <h1>Money Talks</h1>
-    <p class="tagline">A financial literacy guide for young adults</p>
-    <button id="theme-toggle">🌙 Dark Mode</button>
-  </header>
-  <section id="intro">
-    <p>Welcome to <strong>Money Talks</strong>, your interactive guide to mastering financial habits. Explore the cards below to reveal important truths about money management.</p>
-  </section>
-  <section id="cards">
-    <h2>Choose a Card</h2>
-    <p>Click on a card to reveal a financial truth.</p>
-    <div class="card-container">
-      <div class="card" id="card-gambler">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-spade">♠</div>
-            <h3>The Gambler</h3>
-            <p>"One more try won't fix the loss."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Gambler</h3>
-            <p>This card represents the dangerous cycle of risking money on chance. The gambler's mindset whispers that one more try will turn things around, but each attempt deepens the hole.</p>
-            <h4>Warning Signs:</h4>
-            <ul>
-              <li>You chase quick wins or speculative bets.</li>
-              <li>You hide or minimize gambling losses.</li>
-              <li>You borrow or use savings to fund betting.</li>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <span class="brand-logo">MONEY TALKS</span>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#planner">Budget Planner</a></li>
+                <li><a href="#assessment">Risk Check</a></li>
+                <li><a href="#education">Knowledge</a></li>
+                <li><a href="#support">Get Help</a></li>
             </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Set a strict limit on any risk-based spending.</li>
-              <li>Remove gambling apps and block gambling sites.</li>
-              <li>Track losses honestly to see the real cost.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> The house always wins. Control is the real win.</em></p>
-          </div>
         </div>
-      </div>
-      <div class="card" id="card-spender">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-heart">♥</div>
-            <h3>The Spender</h3>
-            <p>"Small purchases can become big habits."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Spender</h3>
-            <p>This card reveals how spending becomes a coping mechanism. The rush of a new purchase feels like progress, but it fades fast—leaving regret and an emptier wallet.</p>
-            <h4>Warning Signs:</h4>
-            <ul>
-              <li>You buy things to feel better when stressed or sad.</li>
-              <li>You feel guilt or anxiety after purchases.</li>
-              <li>You avoid checking your bank balance.</li>
-            </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Use the 24-hour rule before any non-essential purchase.</li>
-              <li>Ask yourself, "Will this matter in 30 days?"</li>
-              <li>Track triggers: note when and why you want to buy.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> Spend with purpose, not impulse.</em></p>
-          </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1>Strengthening Your Financial Future</h1>
+            <p>Welcome to the 8th Challenge of the SLC Project. This interactive guide is built by students, for students, to combat financial illiteracy and gambling addiction in Kazakhstan.</p>
+            <div class="team-badge">Group: Money Talks | Members: Zhazira, Yerdos, Temirlan, Shugyla</div>
         </div>
-      </div>
-      <div class="card" id="card-borrower">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-diamond">♦</div>
-            <h3>The Borrower</h3>
-            <p>"Easy debt is rarely cheap."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Borrower</h3>
-            <p>This card warns about the illusion of free money. Borrowing feels like a solution today but becomes pressure tomorrow. Easy credit can quietly become a heavy burden.</p>
-            <h4>Warning Signs:</h4>
-            <ul>
-              <li>You rely on "buy now, pay later" for everyday items.</li>
-              <li>You only make minimum payments on credit cards.</li>
-              <li>You borrow to maintain lifestyle rather than needs.</li>
-            </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Calculate total cost before any loan, including interest.</li>
-              <li>Never borrow for things that lose value quickly.</li>
-              <li>Build an emergency fund to avoid needless loans.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> Protect your future self by avoiding easy debt.</em></p>
-          </div>
+    </header>
+
+    <main class="container">
+        <section id="planner" class="card">
+            <div class="card-header">
+                <h2>Almaty Student Budget Planner (2025)</h2>
+                <p>Align your spending with your values. Based on Almaty average living costs.[4, 5]</p>
+            </div>
+            <div class="planner-grid">
+                <div class="input-group">
+                    <label for="monthly-income">Total Monthly Income (KZT):</label>
+                    <input type="number" id="monthly-income" value="200000" min="0">
+                    
+                    <div class="slider-box">
+                        <label>Housing & Dorm (30%): <span id="val-housing">60,000</span> KZT</label>
+                        <input type="range" id="slider-housing" min="0" max="100" value="30">
+                    </div>
+                    
+                    <div class="slider-box">
+                        <label>Food & Meals (40%): <span id="val-food">80,000</span> KZT</label>
+                        <input type="range" id="slider-food" min="0" max="100" value="40">
+                    </div>
+
+                    <div class="slider-box">
+                        <label>Transport & Mobile (10%): <span id="val-transport">20,000</span> KZT</label>
+                        <input type="range" id="slider-transport" min="0" max="100" value="10">
+                    </div>
+
+                    <div class="slider-box">
+                        <label>Savings & Emergencies (20%): <span id="val-savings">40,000</span> KZT</label>
+                        <input type="range" id="slider-savings" min="0" max="100" value="20">
+                    </div>
+                </div>
+                <div class="summary-box" id="budget-output">
+                    <h3>Budget Health</h3>
+                    <div class="gauge">
+                        <div id="gauge-fill" class="gauge-fill"></div>
+                    </div>
+                    <p id="budget-status">Status: Balanced</p>
+                    <p class="small-text">Note: 95% of addicts lack these skills. Start tracking today.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="card bg-dark text-light">
+            <div class="card-header">
+                <h2>Gambling Risk Self-Assessment (NODS-SA)</h2>
+                <p>Confidential screening for students. Every "Yes" is a call to action.[33]</p>
+            </div>
+            <div id="quiz-container">
+                <div class="quiz-question">
+                    <p id="q-text">Have you ever needed to gamble with increasing amounts of money to get the same feeling of excitement?</p>
+                    <div class="quiz-controls">
+                        <button class="btn btn-yes" onclick="processRisk(true)">Yes</button>
+                        <button class="btn btn-no" onclick="processRisk(false)">No</button>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div id="q-progress" class="progress-fill" style="width: 20%;"></div>
+                </div>
+            </div>
+            <div id="quiz-result" class="hidden">
+                <h3 id="risk-level">Risk Level: Calculating...</h3>
+                <p id="risk-advice"></p>
+                <button class="btn btn-primary" onclick="resetRisk()">Retake Assessment</button>
+            </div>
+        </section>
+
+        <section id="education" class="card">
+            <div class="card-header">
+                <h2>Master the "Big Three" Concepts</h2>
+                <p>Knowledge is self-defense against the "Easy Money" trap.</p>
+            </div>
+            <div id="edu-quiz">
+                <p id="edu-q">Loading Question...</p>
+                <div id="edu-options" class="options-container"></div>
+            </div>
+        </section>
+
+        <section id="support" class="card">
+            <div class="card-header">
+                <h2>Support Resources in Kazakhstan</h2>
+                <p>If you or someone you know is in financial crisis, these services are confidential and free.[32, 34]</p>
+            </div>
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <h3>Fingramota.kz Hotline</h3>
+                    <p>Financial rights and credit help.</p>
+                    <a href="tel:1459" class="btn btn-call">Call 1459</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Agency for Financial Market</h3>
+                    <p>Address: 21, Koktem-3, Almaty.</p>
+                    <a href="https://www.fingramota.kz" target="_blank" class="btn btn-primary">Online Portal</a>
+                </div>
+                <div class="resource-item">
+                    <h3>Ludomania Support</h3>
+                    <p>Specialized addiction counseling.</p>
+                    <a href="tel:+77272371000" class="btn btn-call">Call +7 727 237 1000</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Money Talks - Foundations of Leadership SLC Project</p>
+            <p>Our Values: Honesty | Responsibility | Growth Mindset | Courage </p>
         </div>
-      </div>
-      <div class="card" id="card-scam">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-club">♣</div>
-            <h3>The Scam</h3>
-            <p>"Easy money often hides a trap."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Scam</h3>
-            <p>This card reveals how scammers exploit hope and urgency. If it sounds too good to be true, it likely is. The Scam works by preying on real desires for quick gains.</p>
-            <h4>Warning Signs:</h4>
-            <ul>
-              <li>Guaranteed high returns with no risk promised.</li>
-              <li>Pressure to act immediately or you "miss out".</li>
-              <li>You must recruit others to earn money.</li>
-            </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Research any opportunity independently before acting.</li>
-              <li>Never send money under time pressure or secrecy.</li>
-              <li>Consult a trusted source before big financial decisions.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> Check before you trust.</em></p>
-          </div>
-        </div>
-      </div>
-      <div class="card" id="card-saver">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-diamond">♦</div>
-            <h3>The Saver</h3>
-            <p>"Small amounts become strong habits."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Saver</h3>
-            <p>This card celebrates the quiet power of consistency. Every tenge saved is a vote for your future self. It's not about deprivation—it’s about choosing tomorrow's freedom.</p>
-            <h4>Signs You Need This:</h4>
-            <ul>
-              <li>No savings at all, not even for small emergencies.</li>
-              <li>You think saving requires large amounts only.</li>
-              <li>You spend your entire income with nothing aside.</li>
-            </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Start small: save just 1,000₸ a week and build habit.</li>
-              <li>Automate transfers to a savings account.</li>
-              <li>Celebrate milestones like your first 50,000₸ saved.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> Small steps still grow into big savings.</em></p>
-          </div>
-        </div>
-      </div>
-      <div class="card" id="card-planner">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="suit suit-spade">♠</div>
-            <h3>The Planner</h3>
-            <p>"A plan creates freedom."</p>
-          </div>
-          <div class="card-back">
-            <h3>The Planner</h3>
-            <p>This card is about awareness and intention. Knowing where your money goes creates space for both responsibility and enjoyment without anxiety.</p>
-            <h4>Signs You Need This:</h4>
-            <ul>
-              <li>You avoid looking at your bank statements.</li>
-              <li>You have goals but no concrete plan to reach them.</li>
-              <li>You're often surprised by low balances or bills.</li>
-            </ul>
-            <h4>Practical Advice:</h4>
-            <ul>
-              <li>Track every expense for one full month.</li>
-              <li>Use the 50/30/20 rule: 50% needs, 30% wants, 20% savings.</li>
-              <li>Review and cut unused subscriptions regularly.</li>
-            </ul>
-            <p><em><strong>Remember:</strong> A plan creates freedom.</em></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <p>Created by our Youth Financial Literacy Initiative. For more resources, visit the <a href="https://www.fdic.gov/consumers/consumer/moneysmart/young_adults.html" target="_blank">FDIC Money Smart for Young Adults</a> program.</p>
-  </footer>
-  <script src="script.js"></script>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
