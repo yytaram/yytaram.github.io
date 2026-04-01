@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinGuide — Financial Literacy for Young Adults</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Fin<span>Guide</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#challenges" class="nav-link">Challenges</a></li>
+        <li><a href="#budget-tool" class="nav-link">Budget</a></li>
+        <li><a href="#savings-tool" class="nav-link">Savings</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#tips" class="nav-link">Tips</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#challenges" class="mob-link">The 7 Challenges</a>
+      <a href="#budget-tool" class="mob-link">Budget Calculator</a>
+      <a href="#savings-tool" class="mob-link">Savings Planner</a>
+      <a href="#quiz" class="mob-link">Take the Quiz</a>
+      <a href="#tips" class="mob-link">Quick Tips</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="hero-dots"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-glow glow-3"></div>
+    </div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal-up">SLC Financial Literacy Project · Kazakhstan</p>
+      <h1 class="hero-heading">
+        <span class="reveal-up" style="--d:0.08s">Your Money.</span>
+        <span class="reveal-up gold-text" style="--d:0.22s">Your Rules.</span>
+        <span class="reveal-up" style="--d:0.36s">Your Future.</span>
+      </h1>
+      <p class="hero-desc reveal-up" style="--d:0.5s">
+        7 challenges. Real skills. Practical tools.<br>
+        Everything a young adult needs to take control of their finances — starting right now.
+      </p>
+      <div class="hero-actions reveal-up" style="--d:0.65s">
+        <a href="#challenges" class="btn-gold">Start the Journey</a>
+        <a href="#quiz" class="btn-ghost">Test Your Knowledge</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS BAR ═══════════════════ -->
+  <div class="stats-bar">
+    <div class="stats-container">
+      <div class="stat reveal-up">
+        <div class="stat-top"><span class="stat-num" data-target="77">0</span><span class="stat-sym">%</span></div>
+        <p>of young adults feel financially stressed</p>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat reveal-up" style="--d:0.1s">
+        <div class="stat-top"><span class="stat-num" data-target="24">0</span><span class="stat-sym">%</span></div>
+        <p>of teens pass a basic financial literacy test</p>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat reveal-up" style="--d:0.2s">
+        <div class="stat-top"><span class="stat-num" data-target="7">0</span><span class="stat-sym">×</span></div>
+        <p>more wealth by starting to save at 25 vs 35</p>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat reveal-up" style="--d:0.3s">
+        <div class="stat-top"><span class="stat-num" data-target="1">0</span><span class="stat-sym">st</span></div>
+        <p>step is knowing exactly where your money goes</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CHALLENGES ═══════════════════ -->
+  <section id="challenges" class="section">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">The Curriculum</div>
+      <h2 class="section-title">7 Financial Challenges</h2>
+      <p class="section-desc">Each challenge builds on the last — guiding you from zero to financially confident.</p>
+    </div>
+
+    <div class="challenges-grid">
+
+      <article class="c-card reveal-up" style="--d:0s">
+        <div class="c-number">01</div>
+        <div class="c-icon">💰</div>
+        <h3 class="c-title">Budgeting Basics</h3>
+        <p class="c-preview">Understand where your money comes from — and where it goes.</p>
+        <div class="c-body">
+          <p>A budget is your financial blueprint. It tells your money where to go instead of wondering where it went. The most popular framework is the <strong>50/30/20 rule</strong>:</p>
+          <ul>
+            <li><strong>50%</strong> — Needs: rent, food, transport, utilities</li>
+            <li><strong>30%</strong> — Wants: dining out, entertainment, subscriptions</li>
+            <li><strong>20%</strong> — Savings & debt repayment</li>
+          </ul>
+          <p>Track every purchase for one month. You'll likely be surprised. Use your banking app, Kaspi app, a notes app, or a simple spreadsheet to track where your tenge goes.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>You don't need to be rich to budget — you need to budget to <em>get</em> rich.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up" style="--d:0.07s">
+        <div class="c-number">02</div>
+        <div class="c-icon">🏦</div>
+        <h3 class="c-title">Smart Saving</h3>
+        <p class="c-preview">Build habits that grow your safety net and future wealth.</p>
+        <div class="c-body">
+          <p>Saving isn't about leftover money — it's about <strong>paying yourself first</strong>. Automate a transfer to savings the moment you get paid.</p>
+          <ul>
+            <li><strong>Emergency Fund:</strong> 3–6 months of living expenses in a liquid account</li>
+            <li><strong>High-Yield Savings:</strong> Earns more interest than a standard account</li>
+            <li><strong>Sinking Funds:</strong> Label savings buckets for specific goals</li>
+          </ul>
+          <p>Saving 25,000 ₸ per month from age 18 can grow into millions of tenge over time. Time is your superpower.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>The best time to start saving was yesterday. The second best time is today.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up" style="--d:0.14s">
+        <div class="c-number">03</div>
+        <div class="c-icon">🏛️</div>
+        <h3 class="c-title">Banking Basics</h3>
+        <p class="c-preview">Navigate accounts, fees, and digital banking with confidence.</p>
+        <div class="c-body">
+          <p>Understanding how banks work helps you avoid hidden fees and maximize your money. Know the difference between account types:</p>
+          <ul>
+            <li><strong>Everyday account:</strong> Card payments, transfers, QR payments, and daily spending</li>
+            <li><strong>Savings/deposit account:</strong> Stores money separately and can earn interest</li>
+            <li><strong>Bank app vs cash:</strong> Use card and app history to track spending instead of guessing</li>
+          </ul>
+          <p>Watch for: transfer fees, cash withdrawal limits, SMS charges, and expensive consumer credit. Compare the terms in your bank app before agreeing.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>Banks earn billions from fees people don't notice. Read the fine print — always.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up" style="--d:0.21s">
+        <div class="c-number">04</div>
+        <div class="c-icon">💳</div>
+        <h3 class="c-title">Credit &amp; Debt</h3>
+        <p class="c-preview">Use credit as a powerful tool — not a dangerous trap.</p>
+        <div class="c-body">
+          <p>Your <strong>credit history</strong> affects your ability to get a loan, installment plan, or mortgage. Build it wisely:</p>
+          <ul>
+            <li><strong>Pay on time:</strong> Late payments can damage your credit history quickly</li>
+            <li><strong>Borrow only what you can repay:</strong> Don't overload yourself with card, BNPL, or installment debt</li>
+            <li><strong>Check your repayment schedule:</strong> Always know the final amount you will repay</li>
+            <li><strong>Avoid too many applications at once:</strong> Repeated loan requests can hurt your profile</li>
+          </ul>
+          <p>Avoid high-interest debt. Even a small overdue balance can become much more expensive over time because of interest, fees, and penalties.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>Good credit opens doors. Bad credit closes them — sometimes for years.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up" style="--d:0.28s">
+        <div class="c-number">05</div>
+        <div class="c-icon">📈</div>
+        <h3 class="c-title">Investing Fundamentals</h3>
+        <p class="c-preview">Make your money work for you through the power of compounding.</p>
+        <div class="c-body">
+          <p><strong>Compound interest</strong> is the 8th wonder of the world. Investing early is the greatest financial advantage young people have.</p>
+          <ul>
+            <li><strong>Index Funds:</strong> Diversified, low-cost, ~7–10% avg. annual returns historically</li>
+            <li><strong>ETFs:</strong> Like index funds but traded like individual stocks</li>
+            <li><strong>Stocks:</strong> Higher risk/reward — research before buying any</li>
+            <li><strong>Bonds:</strong> Lower risk, stable income, great for portfolio balance</li>
+          </ul>
+          <p>Start simple: learn the difference between a bank deposit, bonds, ETFs, and a brokerage account. Begin only after you understand the risks, fees, and your time horizon.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>Time in the market consistently beats trying to time the market.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up" style="--d:0.35s">
+        <div class="c-number">06</div>
+        <div class="c-icon">📋</div>
+        <h3 class="c-title">Taxes &amp; Income</h3>
+        <p class="c-preview">Understand your actual take-home pay — and plan around it.</p>
+        <div class="c-body">
+          <p>Most young people are shocked by their first paycheck. Understanding taxes prevents that — and helps you plan smarter.</p>
+          <ul>
+            <li><strong>Gross vs Net:</strong> Gross = what you earn; Net = what you keep after deductions</li>
+            <li><strong>Tax brackets:</strong> Rates increase with income — but it's <em>marginal</em>, not all-or-nothing</li>
+            <li><strong>Deductions and contributions:</strong> Pension and other official deductions affect what you actually receive</li>
+            <li><strong>Official income matters:</strong> Formal employment records can matter for future loans, visas, and pensions</li>
+          </ul>
+          <p>Use official resources such as the State Revenue Committee website and e-services to check taxes and payments.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>Legally minimizing taxes is smart planning. Learn the rules that work in your favor.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+      <article class="c-card reveal-up c-card--wide" style="--d:0.42s">
+        <div class="c-number">07</div>
+        <div class="c-icon">🎯</div>
+        <h3 class="c-title">Financial Goals</h3>
+        <p class="c-preview">Turn dreams into plans with SMART goal-setting and a roadmap that works.</p>
+        <div class="c-body">
+          <p>Without goals, money just disappears. With goals, every tenge has a purpose. Use the <strong>SMART</strong> framework:</p>
+          <ul>
+            <li><strong>S</strong>pecific — "Save 500,000 ₸ for a laptop or emergency fund" not just "save money"</li>
+            <li><strong>M</strong>easurable — Track progress with real numbers</li>
+            <li><strong>A</strong>chievable — Realistic for your current income level</li>
+            <li><strong>R</strong>elevant — Aligned with your actual values and priorities</li>
+            <li><strong>T</strong>ime-bound — Set a clear, firm deadline</li>
+          </ul>
+          <p>Separate goals by timeline: short-term (0–1 yr), medium-term (1–5 yrs), long-term (5+ yrs). Give each its own savings account or label.</p>
+          <div class="c-takeaway">
+            <span class="kt-tag">Key Takeaway</span>
+            <p>A goal without a plan is just a wish. Write it down. Break it into steps. Start today.</p>
+          </div>
+        </div>
+        <button class="c-toggle" aria-expanded="false">
+          Learn More <span class="c-arrow">↓</span>
+        </button>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BUDGET TOOL ═══════════════════ -->
+  <section id="budget-tool" class="section dark-section">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Interactive Tool</div>
+      <h2 class="section-title">Budget Calculator</h2>
+      <p class="section-desc">Enter your monthly income and visualize your 50/30/20 split — or customize the percentages.</p>
+    </div>
+
+    <div class="tool-wrap reveal-up">
+      <div class="tool-panel tool-inputs">
+        <div class="form-group">
+          <label for="income">Monthly Income (after tax, ₸)</label>
+          <div class="input-prefix-wrap">
+            <span class="input-prefix">₸</span>
+            <input type="number" id="income" placeholder="e.g. 180000" min="0" />
+          </div>
+        </div>
+
+        <div class="sliders-block">
+          <h4 class="sliders-title">Customize Your Split</h4>
+
+          <div class="slider-row">
+            <label>Needs <span class="pct-badge needs-badge" id="needsValDisplay">50%</span></label>
+            <input type="range" id="needsSlider" class="custom-range needs-range" min="20" max="80" value="50" />
+          </div>
+          <div class="slider-row">
+            <label>Wants <span class="pct-badge wants-badge" id="wantsValDisplay">30%</span></label>
+            <input type="range" id="wantsSlider" class="custom-range wants-range" min="5" max="70" value="30" />
+          </div>
+          <div class="slider-row">
+            <label>Savings <span class="pct-badge savings-badge" id="savingsValDisplay">20%</span></label>
+            <div class="savings-readonly-bar">
+              <div class="savings-readonly-fill" id="savingsReadonlyFill" style="width:20%"></div>
+            </div>
+            <span class="savings-auto-note">Auto-calculated</span>
+          </div>
+        </div>
+
+        <div id="splitWarning" class="split-warning" style="display:none">
+          ⚠️ Needs + Wants exceed 100%. Savings is 0% — adjust your sliders.
+        </div>
+
+        <button class="btn-gold" id="calcBudgetBtn">Calculate Budget</button>
+      </div>
+
+      <div class="tool-panel tool-output" id="budgetOutput">
+        <div class="chart-wrap">
+          <canvas id="budgetChart" width="280" height="280" aria-label="Budget donut chart"></canvas>
+          <div class="chart-center-text">
+            <span id="chartCenterLabel">50/30/20</span>
+          </div>
+        </div>
+        <div class="budget-legend">
+          <div class="legend-row needs-row">
+            <div class="legend-dot needs-dot"></div>
+            <div class="legend-info">
+              <span class="legend-label" id="needsLabelLegend">Needs (50%)</span>
+              <span class="legend-amount" id="needsAmount">0 ₸ / month</span>
+            </div>
+          </div>
+          <div class="legend-row wants-row">
+            <div class="legend-dot wants-dot"></div>
+            <div class="legend-info">
+              <span class="legend-label" id="wantsLabelLegend">Wants (30%)</span>
+              <span class="legend-amount" id="wantsAmount">0 ₸ / month</span>
+            </div>
+          </div>
+          <div class="legend-row savings-row">
+            <div class="legend-dot savings-dot"></div>
+            <div class="legend-info">
+              <span class="legend-label" id="savingsLabelLegend">Savings (20%)</span>
+              <span class="legend-amount" id="savingsAmount">0 ₸ / month</span>
+            </div>
+          </div>
+          <div class="legend-hint" id="legendHint">
+            💡 In one year, your savings: <strong id="yearlyTotal">0 ₸</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SAVINGS TOOL ═══════════════════ -->
+  <section id="savings-tool" class="section">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Interactive Tool</div>
+      <h2 class="section-title">Savings Goal Planner</h2>
+      <p class="section-desc">Figure out exactly when you'll reach your target — with compound interest included.</p>
+    </div>
+
+    <div class="tool-wrap reveal-up">
+      <div class="tool-panel tool-inputs">
+        <div class="form-group">
+          <label for="goalName">What are you saving for?</label>
+          <input type="text" id="goalName" placeholder="e.g. Emergency fund, Laptop, IELTS, Travel" />
+        </div>
+        <div class="form-group">
+          <label for="goalAmount">Goal Amount (₸)</label>
+          <input type="number" id="goalAmount" placeholder="e.g. 450000" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="currentSavings">Current Savings (₸)</label>
+          <input type="number" id="currentSavings" placeholder="e.g. 50000" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="monthlyContrib">Monthly Contribution (₸)</label>
+          <input type="number" id="monthlyContrib" placeholder="e.g. 25000" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="interestRate">Annual Interest Rate (%) <span class="optional-note">optional</span></label>
+          <input type="number" id="interestRate" placeholder="e.g. 4.5" min="0" step="0.1" />
+        </div>
+        <button class="btn-gold" id="calcSavingsBtn">Calculate Goal</button>
+      </div>
+
+      <div class="tool-panel tool-output" id="savingsOutput">
+        <div class="savings-result" id="savingsResult">
+          <div class="sr-goal-name" id="srGoalName">Your Goal</div>
+          <div class="sr-months-display">
+            <span class="sr-months-num" id="srMonths">—</span>
+            <span class="sr-months-label">months</span>
+          </div>
+          <div class="sr-target-date" id="srTargetDate"></div>
+
+          <div class="sr-progress-track">
+            <div class="sr-progress-fill" id="srProgressFill" style="width: 0%"></div>
+          </div>
+          <div class="sr-progress-labels">
+            <span id="srCurrentLabel">0 ₸ saved</span>
+            <span id="srGoalLabel">0 ₸ goal</span>
+          </div>
+
+          <div class="sr-breakdown" id="srBreakdown">
+            <div class="sr-bd-row">
+              <span>Starting amount</span>
+              <strong id="bdStart">0 ₸</strong>
+            </div>
+            <div class="sr-bd-row">
+              <span>Total contributions</span>
+              <strong id="bdContribs">0 ₸</strong>
+            </div>
+            <div class="sr-bd-row accent-row">
+              <span>Interest earned</span>
+              <strong id="bdInterest">0 ₸</strong>
+            </div>
+            <div class="sr-bd-row total-row">
+              <span>Final total</span>
+              <strong id="bdTotal">0 ₸</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings-placeholder" id="savingsPlaceholder">
+          <div class="placeholder-icon">🎯</div>
+          <p>Fill in the form and hit<br><strong>Calculate Goal</strong> to see your timeline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ QUIZ ═══════════════════ -->
+  <section id="quiz" class="section dark-section">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Test Yourself</div>
+      <h2 class="section-title">Financial Literacy Quiz</h2>
+      <p class="section-desc">10 questions. How financially savvy are you really?</p>
+    </div>
+
+    <div class="quiz-box reveal-up">
+      <!-- Quiz Active State -->
+      <div id="quizActive">
+        <div class="quiz-meta">
+          <span class="quiz-counter" id="quizCounter">Question 1 of 10</span>
+          <div class="quiz-prog-track">
+            <div class="quiz-prog-fill" id="quizProgFill" style="width: 10%"></div>
+          </div>
+        </div>
+        <p class="quiz-question" id="quizQuestion">Loading question…</p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <button class="btn-gold quiz-next-btn" id="quizNextBtn" style="display:none">
+          Next Question <span>→</span>
+        </button>
+      </div>
+
+      <!-- Quiz Result State -->
+      <div id="quizResult" style="display:none" class="quiz-result">
+        <div class="result-ring">
+          <canvas id="resultRing" width="160" height="160"></canvas>
+          <div class="result-ring-inner">
+            <span class="result-score-num" id="resultScoreNum">0</span>
+            <span class="result-score-den">/10</span>
+          </div>
+        </div>
+        <div class="result-grade" id="resultGrade">—</div>
+        <p class="result-msg" id="resultMsg"></p>
+        <div class="result-actions">
+          <button class="btn-gold" id="retakeQuizBtn">Retake Quiz</button>
+          <a href="#challenges" class="btn-ghost-small">Review Challenges</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TIPS ═══════════════════ -->
+  <section id="tips" class="section">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Quick Wins</div>
+      <h2 class="section-title">Money Tips for Right Now</h2>
+      <p class="section-desc">Small habits that make a massive difference over time.</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card reveal-up" style="--d:0s">
+        <div class="tip-icon">⚡</div>
+        <h4>Automate Everything</h4>
+        <p>Set automatic transfers to savings and auto-pay for bills. Remove willpower from the equation entirely.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.07s">
+        <div class="tip-icon">📱</div>
+        <h4>Track Every Purchase</h4>
+        <p>Log every transaction for 30 days. Awareness alone changes behavior — you'll naturally spend less.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.14s">
+        <div class="tip-icon">🛑</div>
+        <h4>Avoid Lifestyle Inflation</h4>
+        <p>When your income grows, resist immediately upgrading your lifestyle. Save the raise before spending it.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.21s">
+        <div class="tip-icon">📚</div>
+        <h4>Read One Finance Book</h4>
+        <p>Read one practical book or follow one reliable financial literacy source. The key is to start learning consistently.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.28s">
+        <div class="tip-icon">🤝</div>
+        <h4>Negotiate Everything</h4>
+        <p>Your salary, rent, dorm fee, mobile tariff, or internet plan can sometimes be negotiated. Asking once can save real money.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.35s">
+        <div class="tip-icon">⏳</div>
+        <h4>The 24-Hour Rule</h4>
+        <p>Before any non-essential purchase over 25,000 ₸, wait 24 hours. Impulse buys fade. Intentional ones don't.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.42s">
+        <div class="tip-icon">🎯</div>
+        <h4>Write Down Your Goals</h4>
+        <p>People who write down financial goals are 42% more likely to achieve them. Put it somewhere visible.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.49s">
+        <div class="tip-icon">🔍</div>
+        <h4>Audit Your Subscriptions</h4>
+        <p>Check your bank statement for recurring charges. The average person pays for 2–3 subscriptions they forgot about.</p>
+      </div>
+      <div class="tip-card reveal-up" style="--d:0.56s">
+        <div class="tip-icon">💬</div>
+        <h4>Talk About Money</h4>
+        <p>Financial literacy improves when you discuss money openly. Talk to mentors, friends, or seek financial advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">Fin<span>Guide</span></div>
+        <p>A financial literacy project for young adults. Built as part of the SLC curriculum in Kazakhstan — empowering the next generation to own their financial future.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="#challenges">The 7 Challenges</a>
+        <a href="#budget-tool">Budget Calculator</a>
+        <a href="#savings-tool">Savings Planner</a>
+        <a href="#quiz">Financial Quiz</a>
+        <a href="#tips">Quick Tips</a>
+      </div>
+      <div class="footer-col">
+        <h5>Free Resources</h5>
+        <a href="https://www.investopedia.com" target="_blank" rel="noopener">Investopedia</a>
+        <a href="https://www.khanacademy.org/college-careers-more/personal-finance" target="_blank" rel="noopener">Khan Academy — Finance</a>
+        <a href="https://nationalbank.kz/en" target="_blank" rel="noopener">National Bank of Kazakhstan</a>
+        <a href="https://fingramota.kz/" target="_blank" rel="noopener">FinGramota.kz</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 FinGuide · SLC Financial Literacy Project · Made with purpose in Kazakhstan 🇰🇿</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
