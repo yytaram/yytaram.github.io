@@ -1,702 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="Money Talks — a modern, interactive financial literacy guide for young adults. Build habits, reduce risk, and take control of your money." />
-  <title>Money Talks — Financial Literacy Guide</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Money Talks: Financial Guide for Young Adults</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="brand" href="#home" data-link aria-label="Money Talks — Home">
-        <span class="brand-mark" aria-hidden="true">♠</span>
-        <span class="brand-text">
-          <span class="brand-title">Money Talks</span>
-          <span class="brand-subtitle">A guide for young adults (18–27)</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
-          <span class="icon burger" aria-hidden="true"></span>
-        </button>
-
-        <div class="nav-links" id="navLinks">
-          <a href="#learn" data-link>Learn</a>
-          <a href="#tools" data-link>Tools</a>
-          <a href="#cards" data-link>Cards</a>
-          <a href="#plan" data-link>7‑Day Plan</a>
-          <a href="#journey" data-link>Our SLC Journey</a>
-          <a href="#resources" data-link>Resources</a>
-        </div>
-      </nav>
-
-      <div class="header-actions">
-        <button class="pill" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="pill-ic" aria-hidden="true">◐</span>
-          <span class="pill-tx">Theme</span>
-        </button>
-        <button class="pill" id="openSettings" type="button" aria-haspopup="dialog">
-          <span class="pill-ic" aria-hidden="true">⚙</span>
-          <span class="pill-tx">Settings</span>
-        </button>
-      </div>
-    </div>
+<body class="light">
+  <header>
+    <h1>Money Talks</h1>
+    <p class="tagline">A financial literacy guide for young adults</p>
+    <button id="theme-toggle">🌙 Dark Mode</button>
   </header>
-
-  <main id="main" class="site-main">
-    <section id="home" class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Choose a card. Reveal a financial truth.</p>
-          <h1>Build money confidence — without the cringe.</h1>
-          <p class="lead">
-            Money Talks is a practical, gamified guide to financial literacy built for young adults.
-            Learn the basics, spot traps, and build habits that actually stick.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#checkin" data-link>
-              <span class="btn-ic" aria-hidden="true">✓</span>
-              Start the 3‑minute check‑in
-            </a>
-            <a class="btn" href="#cards" data-link>
-              <span class="btn-ic" aria-hidden="true">🂠</span>
-              Pick a Money Talks card
-            </a>
+  <section id="intro">
+    <p>Welcome to <strong>Money Talks</strong>, your interactive guide to mastering financial habits. Explore the cards below to reveal important truths about money management.</p>
+  </section>
+  <section id="cards">
+    <h2>Choose a Card</h2>
+    <p>Click on a card to reveal a financial truth.</p>
+    <div class="card-container">
+      <div class="card" id="card-gambler">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-spade">♠</div>
+            <h3>The Gambler</h3>
+            <p>"One more try won't fix the loss."</p>
           </div>
-
-          <div class="hero-stats" aria-label="Your progress">
-            <div class="stat-card">
-              <div class="stat-top">
-                <span class="stat-kicker">Your progress</span>
-                <button class="link-btn" id="resetProgress" type="button">Reset</button>
-              </div>
-              <div class="progress-row">
-                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                  <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="progress-metric">
-                  <span class="progress-val" id="progressPct">0%</span>
-                  <span class="progress-lbl">completed</span>
-                </div>
-              </div>
-              <div class="badge-row" id="badgeRow" aria-label="Badges"></div>
-            </div>
-
-            <div class="stat-card">
-              <span class="stat-kicker">Today’s quick win</span>
-              <div class="quick-win" id="quickWin">
-                <p class="quick-win-title">Loading…</p>
-                <p class="quick-win-body"> </p>
-              </div>
-              <div class="quick-win-actions">
-                <button class="btn small" id="newQuickWin" type="button">New tip</button>
-                <button class="btn small ghost" id="markQuickWinDone" type="button">Mark done</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-panels">
-          <div class="panel glass">
-            <div class="panel-head">
-              <span class="pill chip">Your path</span>
-              <span class="muted">Personalised in minutes</span>
-            </div>
-            <div class="panel-body">
-              <ul class="tick-list" id="pathPreview">
-                <li>Figure out where your money goes.</li>
-                <li>Build a budget that fits real life.</li>
-                <li>Spot traps: debt, scams, risky bets.</li>
-                <li>Turn habits into a system.</li>
-              </ul>
-              <a class="btn full" href="#checkin" data-link>
-                <span class="btn-ic" aria-hidden="true">➜</span>
-                Personalise my guide
-              </a>
-            </div>
-          </div>
-
-          <div class="panel card-back">
-            <div class="card-back-inner">
-              <div class="card-back-title">MONEY TALKS</div>
-              <div class="card-back-sub">♠ ♥ ♦ ♣</div>
-              <p class="card-back-copy">
-                Every financial habit hides a pattern. Some build your future — others quietly drain it.
-                Turn a card to discover lessons that could change how you handle money forever.
-              </p>
-              <div class="card-back-meta">
-                <div class="meta-chip">
-                  <span class="meta-k">Event completed</span>
-                  <span class="meta-v">Psychology Meeting</span>
-                </div>
-                <div class="meta-chip">
-                  <span class="meta-k">Location</span>
-                  <span class="meta-v">Center for Preparatory Studies</span>
-                </div>
-                <div class="meta-chip">
-                  <span class="meta-k">Date</span>
-                  <span class="meta-v">20/03/2026</span>
-                </div>
-              </div>
-              <a class="link-row" href="#cards" data-link>
-                <span>Draw a card</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </div>
+          <div class="card-back">
+            <h3>The Gambler</h3>
+            <p>This card represents the dangerous cycle of risking money on chance. The gambler's mindset whispers that one more try will turn things around, but each attempt deepens the hole.</p>
+            <h4>Warning Signs:</h4>
+            <ul>
+              <li>You chase quick wins or speculative bets.</li>
+              <li>You hide or minimize gambling losses.</li>
+              <li>You borrow or use savings to fund betting.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Set a strict limit on any risk-based spending.</li>
+              <li>Remove gambling apps and block gambling sites.</li>
+              <li>Track losses honestly to see the real cost.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> The house always wins. Control is the real win.</em></p>
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <div class="micro-bar" role="note" aria-label="Tip">
-          <span class="micro-ic" aria-hidden="true">💡</span>
-          Tip: This site works offline. Your progress saves to your browser (local storage).
-        </div>
-      </div>
-    </section>
-
-    <section id="checkin" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Your 3‑minute check‑in</h2>
-          <p class="muted">
-            Get a personalised path (topics + tools + actions). No sign‑ups. No judgement.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card">
-            <form id="checkinForm" class="form" autocomplete="on">
-              <div class="form-row">
-                <label class="field">
-                  <span class="label">Age range</span>
-                  <select name="age" required>
-                    <option value="" selected disabled>Choose…</option>
-                    <option value="16-18">16–18</option>
-                    <option value="19-22">19–22</option>
-                    <option value="23-27">23–27</option>
-                    <option value="28+">28+</option>
-                  </select>
-                </label>
-
-                <label class="field">
-                  <span class="label">Currency</span>
-                  <select name="currency" required>
-                    <option value="KZT" selected>KZT (₸)</option>
-                    <option value="GBP">GBP (£)</option>
-                    <option value="USD">USD ($)</option>
-                    <option value="EUR">EUR (€)</option>
-                  </select>
-                </label>
-              </div>
-
-              <div class="form-row">
-                <label class="field">
-                  <span class="label">Your biggest struggle right now</span>
-                  <select name="struggle" required>
-                    <option value="" selected disabled>Choose…</option>
-                    <option value="spender">Impulse spending / lifestyle creep</option>
-                    <option value="gambler">Risky bets / gambling / “get rich quick”</option>
-                    <option value="borrower">Debt / credit / buy‑now‑pay‑later</option>
-                    <option value="scam">Scams / fraud / pyramid schemes</option>
-                    <option value="saver">Saving feels impossible</option>
-                    <option value="planner">No plan / don’t know where it goes</option>
-                  </select>
-                </label>
-              </div>
-
-              <div class="form-row">
-                <label class="field">
-                  <span class="label">Your main goal (next 30 days)</span>
-                  <select name="goal" required>
-                    <option value="" selected disabled>Choose…</option>
-                    <option value="budget">Build a budget I can follow</option>
-                    <option value="save">Start saving (even small)</option>
-                    <option value="debt">Start paying down debt</option>
-                    <option value="safety">Avoid scams & protect my accounts</option>
-                    <option value="invest">Learn investing basics safely</option>
-                    <option value="habits">Build better money habits</option>
-                  </select>
-                </label>
-              </div>
-
-              <div class="form-row">
-                <label class="field">
-                  <span class="label">Monthly take‑home income (optional)</span>
-                  <input name="income" type="number" inputmode="decimal" min="0" step="1" placeholder="e.g., 250000" />
-                </label>
-              </div>
-
-              <div class="form-row">
-                <button class="btn primary" type="submit">
-                  <span class="btn-ic" aria-hidden="true">✨</span>
-                  Build my path
-                </button>
-                <button class="btn ghost" type="button" id="prefillDemo">
-                  Prefill example
-                </button>
-              </div>
-
-              <div class="micro-note">
-                This is education, not financial advice. If you’re in immediate danger or crisis, contact local emergency services.
-              </div>
-            </form>
+      <div class="card" id="card-spender">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-heart">♥</div>
+            <h3>The Spender</h3>
+            <p>"Small purchases can become big habits."</p>
           </div>
-
-          <div class="card" id="checkinResultCard" aria-live="polite">
-            <div class="card-head">
-              <h3 class="h3">Your personalised path</h3>
-              <div class="pill chip" id="personaChip">Not generated yet</div>
-            </div>
-
-            <div class="card-body" id="checkinResult">
-              <p class="muted">Complete the check‑in to generate your next steps.</p>
-            </div>
-
-            <div class="card-foot split">
-              <button class="btn small" id="savePath" type="button" disabled>Save path</button>
-              <button class="btn small ghost" id="sharePath" type="button" disabled>Copy summary</button>
-            </div>
+          <div class="card-back">
+            <h3>The Spender</h3>
+            <p>This card reveals how spending becomes a coping mechanism. The rush of a new purchase feels like progress, but it fades fast—leaving regret and an emptier wallet.</p>
+            <h4>Warning Signs:</h4>
+            <ul>
+              <li>You buy things to feel better when stressed or sad.</li>
+              <li>You feel guilt or anxiety after purchases.</li>
+              <li>You avoid checking your bank balance.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Use the 24-hour rule before any non-essential purchase.</li>
+              <li>Ask yourself, "Will this matter in 30 days?"</li>
+              <li>Track triggers: note when and why you want to buy.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> Spend with purpose, not impulse.</em></p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="learn" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Learn in bite‑size lessons</h2>
-          <p class="muted">
-            Short modules with practical actions. Mark lessons as completed to track progress.
-          </p>
-        </div>
-
-        <div class="toolbar">
-          <div class="search">
-            <span class="search-ic" aria-hidden="true">⌕</span>
-            <input id="learnSearch" type="search" placeholder="Search topics (budget, debt, scam, gambling…)"/>
+      <div class="card" id="card-borrower">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-diamond">♦</div>
+            <h3>The Borrower</h3>
+            <p>"Easy debt is rarely cheap."</p>
           </div>
-          <div class="toolbar-right">
-            <button class="btn small" id="openQuiz" type="button">
-              <span class="btn-ic" aria-hidden="true">🧠</span>
-              Take a quick quiz
-            </button>
-            <button class="btn small ghost" id="markAllLessonsRead" type="button">Mark all as read (demo)</button>
-          </div>
-        </div>
-
-        <div class="learn-grid" id="learnGrid" aria-label="Learning modules"></div>
-      </div>
-    </section>
-
-    <section id="tools" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Tools you can actually use</h2>
-          <p class="muted">
-            Budget builder, emergency fund target, debt payoff simulator, compound growth, and scam shield.
-          </p>
-        </div>
-
-        <div class="tools-shell">
-          <div class="tabs" role="tablist" aria-label="Tools">
-            <button class="tab" role="tab" aria-selected="true" aria-controls="toolPanel" id="tab-budget" data-tool="budget">Budget</button>
-            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-emergency" data-tool="emergency">Emergency fund</button>
-            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-debt" data-tool="debt">Debt payoff</button>
-            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-growth" data-tool="growth">Compound growth</button>
-            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-scam" data-tool="scam">Scam shield</button>
-          </div>
-
-          <div class="tool-panel card" id="toolPanel" role="tabpanel" aria-labelledby="tab-budget"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cards" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Money Talks card deck</h2>
-          <p class="muted">
-            Choose a card to reveal a pattern — then take one concrete action today.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">Draw a card</h3>
-              <div class="pill chip">Interactive</div>
-            </div>
-
-            <div class="card-body">
-              <div class="deck">
-                <div class="deck-stack" aria-hidden="true">
-                  <div class="deck-card back"></div>
-                  <div class="deck-card back"></div>
-                  <div class="deck-card back"></div>
-                </div>
-                <div class="deck-actions">
-                  <button class="btn primary" id="drawCard" type="button">
-                    <span class="btn-ic" aria-hidden="true">🂠</span>
-                    Shuffle & draw
-                  </button>
-                  <button class="btn" id="viewAllCards" type="button">
-                    <span class="btn-ic" aria-hidden="true">🃏</span>
-                    Browse all cards
-                  </button>
-                  <button class="btn ghost" id="dailyCard" type="button">
-                    <span class="btn-ic" aria-hidden="true">☀</span>
-                    Daily card
-                  </button>
-                </div>
-              </div>
-
-              <div class="micro-note">
-                Tip: In the card view, double‑tap / double‑click the title to jump to the next section.
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">Saved cards</h3>
-              <div class="pill chip" id="savedCount">0</div>
-            </div>
-            <div class="card-body">
-              <div class="empty-state" id="savedEmpty">
-                <p class="muted">Save a card to keep it here.</p>
-              </div>
-              <div class="mini-list" id="savedList" aria-label="Saved cards list"></div>
-            </div>
-            <div class="card-foot split">
-              <button class="btn small ghost" id="exportData" type="button">Export data</button>
-              <button class="btn small" id="importData" type="button">Import data</button>
-              <input id="importFile" type="file" accept="application/json" hidden />
-            </div>
-          </div>
-        </div>
-
-        <div class="subhead-row">
-          <h3 class="h3">All cards</h3>
-          <div class="muted">Knowledge is the strongest hand you can play.</div>
-        </div>
-        <div class="cards-grid" id="cardsGrid" aria-label="All Money Talks cards"></div>
-      </div>
-    </section>
-
-    <section id="plan" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Your 7‑Day Money Reset</h2>
-          <p class="muted">
-            A simple plan designed for students and young adults. Tiny actions, real momentum.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">The plan</h3>
-              <div class="pill chip" id="planProgressChip">0/7</div>
-            </div>
-            <div class="card-body">
-              <div class="plan" id="planList" aria-label="7-Day plan list"></div>
-            </div>
-            <div class="card-foot split">
-              <button class="btn small" id="planMarkAll" type="button">Mark all done</button>
-              <button class="btn small ghost" id="planReset" type="button">Reset plan</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">Make it yours</h3>
-              <div class="pill chip">Custom</div>
-            </div>
-            <div class="card-body">
-              <form class="form" id="planCustomForm">
-                <label class="field">
-                  <span class="label">Focus this week</span>
-                  <select name="focus">
-                    <option value="balanced" selected>Balanced</option>
-                    <option value="save">Saving</option>
-                    <option value="debt">Debt</option>
-                    <option value="safety">Safety & scams</option>
-                    <option value="habits">Habits & planning</option>
-                    <option value="risk">Gambling & risky bets</option>
-                  </select>
-                </label>
-
-                <label class="field">
-                  <span class="label">Minutes per day you can commit</span>
-                  <input name="minutes" type="range" min="5" max="45" step="5" value="10" />
-                  <span class="range-val" id="planMinutesVal">10 min/day</span>
-                </label>
-
-                <button class="btn primary" type="submit">
-                  <span class="btn-ic" aria-hidden="true">↻</span>
-                  Rebuild plan
-                </button>
-              </form>
-
-              <div class="micro-note">
-                Progress saves automatically. Perfect is not required — consistency is.
-              </div>
-            </div>
+          <div class="card-back">
+            <h3>The Borrower</h3>
+            <p>This card warns about the illusion of free money. Borrowing feels like a solution today but becomes pressure tomorrow. Easy credit can quietly become a heavy burden.</p>
+            <h4>Warning Signs:</h4>
+            <ul>
+              <li>You rely on "buy now, pay later" for everyday items.</li>
+              <li>You only make minimum payments on credit cards.</li>
+              <li>You borrow to maintain lifestyle rather than needs.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Calculate total cost before any loan, including interest.</li>
+              <li>Never borrow for things that lose value quickly.</li>
+              <li>Build an emergency fund to avoid needless loans.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> Protect your future self by avoiding easy debt.</em></p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="journey" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Our SLC project journey</h2>
-          <p class="muted">
-            Built around “Money Talks” to raise awareness of financial illiteracy and gambling addiction. Explore what we’ve done and what we can include next.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">Challenges completed</h3>
-              <div class="pill chip">1–7</div>
-            </div>
-            <div class="card-body">
-              <div class="timeline" id="slcTimeline" aria-label="SLC challenges timeline"></div>
-            </div>
+      <div class="card" id="card-scam">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-club">♣</div>
+            <h3>The Scam</h3>
+            <p>"Easy money often hides a trap."</p>
           </div>
-
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">What to include in the “guide”</h3>
-              <div class="pill chip">Ideas</div>
-            </div>
-            <div class="card-body">
-              <p class="muted">
-                Turn your project into a lasting guide by adding modules, tools, and community actions.
-                Tick items to create your roadmap for Challenges 8–10.
-              </p>
-              <div class="checklist" id="guideIdeas" aria-label="Guide content ideas checklist"></div>
-            </div>
-            <div class="card-foot split">
-              <button class="btn small" id="ideasCopy" type="button">Copy roadmap</button>
-              <button class="btn small ghost" id="ideasReset" type="button">Reset</button>
-            </div>
+          <div class="card-back">
+            <h3>The Scam</h3>
+            <p>This card reveals how scammers exploit hope and urgency. If it sounds too good to be true, it likely is. The Scam works by preying on real desires for quick gains.</p>
+            <h4>Warning Signs:</h4>
+            <ul>
+              <li>Guaranteed high returns with no risk promised.</li>
+              <li>Pressure to act immediately or you "miss out".</li>
+              <li>You must recruit others to earn money.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Research any opportunity independently before acting.</li>
+              <li>Never send money under time pressure or secrecy.</li>
+              <li>Consult a trusted source before big financial decisions.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> Check before you trust.</em></p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="resources" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Resources & safety notes</h2>
-          <p class="muted">
-            Learn more from reputable sources and know what to do if something feels off.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">Credible learning links</h3>
-              <div class="pill chip">External</div>
-            </div>
-            <div class="card-body" id="resourceLinks"></div>
+      <div class="card" id="card-saver">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-diamond">♦</div>
+            <h3>The Saver</h3>
+            <p>"Small amounts become strong habits."</p>
           </div>
-
-          <div class="card">
-            <div class="card-head">
-              <h3 class="h3">If gambling is becoming a problem</h3>
-              <div class="pill chip warn">Support</div>
-            </div>
-            <div class="card-body">
-              <div class="callout warn">
-                <strong>Important:</strong> If you feel out of control, you’re not “weak” — you’re human. Talk to someone you trust and reach out for professional support if you can.
-              </div>
-              <ul class="tick-list">
-                <li>Pause: move money away from “easy access” (remove saved card details, limit apps).</li>
-                <li>Track losses honestly (numbers reduce denial).</li>
-                <li>Replace the “thrill” with a healthier challenge (sport, learning, building, community).</li>
-                <li>If you’re in immediate danger or crisis, contact local emergency services.</li>
-              </ul>
-              <div class="micro-note">
-                This site provides education and habit tools. It does not diagnose or treat addiction.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <footer class="footer">
-          <div class="footer-inner">
-            <div class="footer-left">
-              <div class="footer-title">Money Talks</div>
-              <div class="footer-muted">A student-led guide for financial literacy (SLC project).</div>
-            </div>
-            <div class="footer-right">
-              <a class="link" href="#top" data-link>Back to top</a>
-              <button class="link-btn" id="openChangelog" type="button">What’s inside?</button>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <dialog class="dialog" id="settingsDialog" aria-label="Settings">
-    <form method="dialog" class="dialog-inner">
-      <div class="dialog-head">
-        <h3 class="h3">Settings</h3>
-        <button class="icon-btn" type="submit" aria-label="Close">
-          <span class="icon close" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <div class="dialog-body">
-        <div class="grid two">
-          <div class="card inset">
-            <h4 class="h4">Theme</h4>
-            <p class="muted">Choose light, dark, or follow system.</p>
-            <div class="seg" role="group" aria-label="Theme selection">
-              <button type="button" class="seg-btn" data-theme="system">System</button>
-              <button type="button" class="seg-btn" data-theme="light">Light</button>
-              <button type="button" class="seg-btn" data-theme="dark">Dark</button>
-            </div>
-          </div>
-
-          <div class="card inset">
-            <h4 class="h4">Text size</h4>
-            <p class="muted">Adjust readability (saved locally).</p>
-            <label class="field">
-              <span class="label">Scale</span>
-              <input id="textScale" type="range" min="90" max="120" step="5" value="100" />
-              <span class="range-val" id="textScaleVal">100%</span>
-            </label>
-          </div>
-        </div>
-
-        <div class="card inset">
-          <h4 class="h4">Data</h4>
-          <p class="muted">Export your progress or clear everything.</p>
-          <div class="row">
-            <button class="btn small" type="button" id="settingsExport">Export</button>
-            <button class="btn small" type="button" id="settingsImport">Import</button>
-            <button class="btn small danger" type="button" id="settingsClear">Clear all</button>
+          <div class="card-back">
+            <h3>The Saver</h3>
+            <p>This card celebrates the quiet power of consistency. Every tenge saved is a vote for your future self. It's not about deprivation—it’s about choosing tomorrow's freedom.</p>
+            <h4>Signs You Need This:</h4>
+            <ul>
+              <li>No savings at all, not even for small emergencies.</li>
+              <li>You think saving requires large amounts only.</li>
+              <li>You spend your entire income with nothing aside.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Start small: save just 1,000₸ a week and build habit.</li>
+              <li>Automate transfers to a savings account.</li>
+              <li>Celebrate milestones like your first 50,000₸ saved.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> Small steps still grow into big savings.</em></p>
           </div>
         </div>
       </div>
-
-      <div class="dialog-foot">
-        <button class="btn" type="submit">Done</button>
-      </div>
-    </form>
-  </dialog>
-
-  <dialog class="dialog" id="lessonDialog" aria-label="Lesson">
-    <form method="dialog" class="dialog-inner dialog-wide">
-      <div class="dialog-head">
-        <h3 class="h3" id="lessonTitle">Lesson</h3>
-        <button class="icon-btn" type="submit" aria-label="Close">
-          <span class="icon close" aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="dialog-body" id="lessonBody"></div>
-      <div class="dialog-foot split">
-        <button class="btn ghost" type="button" id="lessonMarkDone">Mark lesson complete</button>
-        <button class="btn" type="submit">Close</button>
-      </div>
-    </form>
-  </dialog>
-
-  <dialog class="dialog" id="quizDialog" aria-label="Quick quiz">
-    <form method="dialog" class="dialog-inner dialog-wide">
-      <div class="dialog-head">
-        <h3 class="h3">Quick quiz</h3>
-        <button class="icon-btn" type="submit" aria-label="Close">
-          <span class="icon close" aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="dialog-body" id="quizBody"></div>
-      <div class="dialog-foot split">
-        <button class="btn ghost" type="button" id="quizReset">Restart</button>
-        <button class="btn" type="submit">Done</button>
-      </div>
-    </form>
-  </dialog>
-
-  <dialog class="dialog" id="cardDialog" aria-label="Money Talks card">
-    <form method="dialog" class="dialog-inner dialog-wide">
-      <div class="dialog-head">
-        <div class="dialog-head-left">
-          <div class="pill chip" id="cardBadge">Card</div>
-          <h3 class="h3 card-title" id="cardTitle">Card</h3>
-          <div class="muted" id="cardQuote"></div>
-        </div>
-        <button class="icon-btn" type="submit" aria-label="Close">
-          <span class="icon close" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <div class="dialog-body scroll" id="cardBody"></div>
-
-      <div class="dialog-foot split">
-        <div class="row">
-          <button class="btn small ghost" type="button" id="cardPrev">← Prev</button>
-          <button class="btn small ghost" type="button" id="cardNext">Next →</button>
-        </div>
-
-        <div class="row">
-          <button class="btn small" type="button" id="cardSave">Save</button>
-          <button class="btn small" type="button" id="downloadQuote">Download quote card</button>
-          <button class="btn small ghost" type="submit">Close</button>
+      <div class="card" id="card-planner">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="suit suit-spade">♠</div>
+            <h3>The Planner</h3>
+            <p>"A plan creates freedom."</p>
+          </div>
+          <div class="card-back">
+            <h3>The Planner</h3>
+            <p>This card is about awareness and intention. Knowing where your money goes creates space for both responsibility and enjoyment without anxiety.</p>
+            <h4>Signs You Need This:</h4>
+            <ul>
+              <li>You avoid looking at your bank statements.</li>
+              <li>You have goals but no concrete plan to reach them.</li>
+              <li>You're often surprised by low balances or bills.</li>
+            </ul>
+            <h4>Practical Advice:</h4>
+            <ul>
+              <li>Track every expense for one full month.</li>
+              <li>Use the 50/30/20 rule: 50% needs, 30% wants, 20% savings.</li>
+              <li>Review and cut unused subscriptions regularly.</li>
+            </ul>
+            <p><em><strong>Remember:</strong> A plan creates freedom.</em></p>
+          </div>
         </div>
       </div>
-    </form>
-  </dialog>
-
-  <dialog class="dialog" id="changelogDialog" aria-label="What’s inside">
-    <form method="dialog" class="dialog-inner">
-      <div class="dialog-head">
-        <h3 class="h3">What’s inside this website</h3>
-        <button class="icon-btn" type="submit" aria-label="Close">
-          <span class="icon close" aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="dialog-body">
-        <ul class="tick-list">
-          <li>Personalised check‑in (persona + next steps).</li>
-          <li>Bite‑size lessons with completion tracking.</li>
-          <li>Budget, emergency fund, debt payoff, compound growth tools.</li>
-          <li>Scam shield checklist with risk score.</li>
-          <li>Money Talks card deck with “Download quote card”.</li>
-          <li>7‑Day Money Reset plan.</li>
-          <li>SLC journey timeline + roadmap ideas for Challenges 8–10.</li>
-          <li>Everything saves locally and works offline.</li>
-        </ul>
-      </div>
-      <div class="dialog-foot">
-        <button class="btn" type="submit">Close</button>
-      </div>
-    </form>
-  </dialog>
-
-  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
-
-  <noscript>
-    <div class="noscript">
-      This site needs JavaScript to run. Please enable JavaScript and reload.
     </div>
-  </noscript>
-
+  </section>
+  <footer>
+    <p>Created by our Youth Financial Literacy Initiative. For more resources, visit the <a href="https://www.fdic.gov/consumers/consumer/moneysmart/young_adults.html" target="_blank">FDIC Money Smart for Young Adults</a> program.</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
