@@ -1,144 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money Talks | SLC Financial Literacy Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Moves | Financial Literacy Guide for Young Adults</title>
+  <meta name="description" content="An interactive financial literacy guide for young adults built for an SLC project." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-content">
-            <span class="brand-logo">MONEY TALKS</span>
-            <ul class="nav-links">
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#planner">Budget Planner</a></li>
-                <li><a href="#assessment">Risk Check</a></li>
-                <li><a href="#education">Knowledge</a></li>
-                <li><a href="#support">Get Help</a></li>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <span class="brand-mark">₸</span>
+        <div>
+          <strong>Money Moves</strong>
+          <small>Guide for Young Adults</small>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#about">About</a>
+        <a href="#guide">Guide</a>
+        <a href="#psychology">Psychology</a>
+        <a href="#budget-lab">Budget Lab</a>
+        <a href="#slc">SLC Journey</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Student Leadership Challenge Project</span>
+          <h1>Financial literacy for young adults should feel real, practical, and impossible to ignore.</h1>
+          <p class="lead">
+            This website turns our SLC project into an interactive guide that helps students and young adults
+            understand budgeting, savings, debt, scams, gambling risk, and the psychology behind money decisions.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#guide">Explore the Guide</a>
+            <a class="btn btn-secondary" href="#slc">See the SLC Journey</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>Budget smarter</span>
+            <span>Spot risky habits</span>
+            <span>Protect your future</span>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="panel-card main-panel">
+            <div class="panel-top">
+              <span class="status-dot"></span>
+              <span>Interactive learning hub</span>
+            </div>
+            <h2>Built around the real issues young people face</h2>
+            <ul class="check-list">
+              <li>Impulse spending and emotional buying</li>
+              <li>Debt, BNPL, and borrowed money</li>
+              <li>Online scams and “easy money” traps</li>
+              <li>Gambling-style risk and short-term thinking</li>
+              <li>Healthy money habits for students</li>
             </ul>
+            <div class="mini-stats">
+              <article>
+                <strong>6</strong>
+                <span>guide pillars</span>
+              </article>
+              <article>
+                <strong>10</strong>
+                <span>SLC challenges</span>
+              </article>
+              <article>
+                <strong>4</strong>
+                <span>interactive tools</span>
+              </article>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <header class="hero-section">
-        <div class="container">
-            <h1>Strengthening Your Financial Future</h1>
-            <p>Welcome to the 8th Challenge of the SLC Project. This interactive guide is built by students, for students, to combat financial illiteracy and gambling addiction in Kazakhstan.</p>
-            <div class="team-badge">Group: Money Talks | Members: Zhazira, Yerdos, Temirlan, Shugyla</div>
+    <section class="section stats-strip">
+      <div class="container stats-grid reveal">
+        <article class="stat-card">
+          <span class="stat-label">Target audience</span>
+          <strong>Students & young adults</strong>
+          <p>Especially those managing money for the first time and making independent financial choices.</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Core message</span>
+          <strong>Money habits shape freedom</strong>
+          <p>Financial literacy is not only about numbers. It is also about emotions, beliefs, and behavior.</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Project approach</span>
+          <strong>Guide + evidence + action</strong>
+          <p>We combine awareness, psychology, practical advice, collaboration, and visible SLC evidence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Why this topic matters</span>
+          <h2>A guide that speaks to real life, not just theory.</h2>
+          <p>
+            Many young people learn about money only after making stressful mistakes: overspending, borrowing
+            too quickly, trusting suspicious offers, or treating financial pressure as normal. Our project responds
+            to that gap with a youth-focused guide that is visual, interactive, and easy to apply in everyday life.
+          </p>
         </div>
-    </header>
 
-    <main class="container">
-        <section id="planner" class="card">
-            <div class="card-header">
-                <h2>Almaty Student Budget Planner (2025)</h2>
-                <p>Align your spending with your values. Based on Almaty average living costs.[4, 5]</p>
-            </div>
-            <div class="planner-grid">
-                <div class="input-group">
-                    <label for="monthly-income">Total Monthly Income (KZT):</label>
-                    <input type="number" id="monthly-income" value="200000" min="0">
-                    
-                    <div class="slider-box">
-                        <label>Housing & Dorm (30%): <span id="val-housing">60,000</span> KZT</label>
-                        <input type="range" id="slider-housing" min="0" max="100" value="30">
-                    </div>
-                    
-                    <div class="slider-box">
-                        <label>Food & Meals (40%): <span id="val-food">80,000</span> KZT</label>
-                        <input type="range" id="slider-food" min="0" max="100" value="40">
-                    </div>
-
-                    <div class="slider-box">
-                        <label>Transport & Mobile (10%): <span id="val-transport">20,000</span> KZT</label>
-                        <input type="range" id="slider-transport" min="0" max="100" value="10">
-                    </div>
-
-                    <div class="slider-box">
-                        <label>Savings & Emergencies (20%): <span id="val-savings">40,000</span> KZT</label>
-                        <input type="range" id="slider-savings" min="0" max="100" value="20">
-                    </div>
-                </div>
-                <div class="summary-box" id="budget-output">
-                    <h3>Budget Health</h3>
-                    <div class="gauge">
-                        <div id="gauge-fill" class="gauge-fill"></div>
-                    </div>
-                    <p id="budget-status">Status: Balanced</p>
-                    <p class="small-text">Note: 95% of addicts lack these skills. Start tracking today.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="assessment" class="card bg-dark text-light">
-            <div class="card-header">
-                <h2>Gambling Risk Self-Assessment (NODS-SA)</h2>
-                <p>Confidential screening for students. Every "Yes" is a call to action.[33]</p>
-            </div>
-            <div id="quiz-container">
-                <div class="quiz-question">
-                    <p id="q-text">Have you ever needed to gamble with increasing amounts of money to get the same feeling of excitement?</p>
-                    <div class="quiz-controls">
-                        <button class="btn btn-yes" onclick="processRisk(true)">Yes</button>
-                        <button class="btn btn-no" onclick="processRisk(false)">No</button>
-                    </div>
-                </div>
-                <div class="progress-bar">
-                    <div id="q-progress" class="progress-fill" style="width: 20%;"></div>
-                </div>
-            </div>
-            <div id="quiz-result" class="hidden">
-                <h3 id="risk-level">Risk Level: Calculating...</h3>
-                <p id="risk-advice"></p>
-                <button class="btn btn-primary" onclick="resetRisk()">Retake Assessment</button>
-            </div>
-        </section>
-
-        <section id="education" class="card">
-            <div class="card-header">
-                <h2>Master the "Big Three" Concepts</h2>
-                <p>Knowledge is self-defense against the "Easy Money" trap.</p>
-            </div>
-            <div id="edu-quiz">
-                <p id="edu-q">Loading Question...</p>
-                <div id="edu-options" class="options-container"></div>
-            </div>
-        </section>
-
-        <section id="support" class="card">
-            <div class="card-header">
-                <h2>Support Resources in Kazakhstan</h2>
-                <p>If you or someone you know is in financial crisis, these services are confidential and free.[32, 34]</p>
-            </div>
-            <div class="resource-grid">
-                <div class="resource-item">
-                    <h3>Fingramota.kz Hotline</h3>
-                    <p>Financial rights and credit help.</p>
-                    <a href="tel:1459" class="btn btn-call">Call 1459</a>
-                </div>
-                <div class="resource-item">
-                    <h3>Agency for Financial Market</h3>
-                    <p>Address: 21, Koktem-3, Almaty.</p>
-                    <a href="https://www.fingramota.kz" target="_blank" class="btn btn-primary">Online Portal</a>
-                </div>
-                <div class="resource-item">
-                    <h3>Ludomania Support</h3>
-                    <p>Specialized addiction counseling.</p>
-                    <a href="tel:+77272371000" class="btn btn-call">Call +7 727 237 1000</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Money Talks - Foundations of Leadership SLC Project</p>
-            <p>Our Values: Honesty | Responsibility | Growth Mindset | Courage </p>
+        <div class="info-stack reveal">
+          <article class="info-card">
+            <h3>What this website can include</h3>
+            <ul class="bullet-list">
+              <li>Practical advice for budgeting, saving, borrowing, and avoiding scams</li>
+              <li>Psychology-based explanations of risky money behavior</li>
+              <li>Interactive tools, quizzes, and self-check activities</li>
+              <li>SLC challenge evidence, photos, links, and outcomes</li>
+              <li>Guest speaker insights, interviews, and event reflections</li>
+            </ul>
+          </article>
+          <article class="info-card accent">
+            <h3>Best final version for presentation</h3>
+            <ul class="bullet-list">
+              <li>Add real event photos, screenshots, posters, and survey results</li>
+              <li>Add numbers: participants, comments, shares, feedback, attendance</li>
+              <li>Add short testimonials from students or guest speakers</li>
+              <li>Add direct links to challenge pages, video, slides, and documents</li>
+            </ul>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section" id="guide">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Guide pillars</span>
+          <h2>What young adults actually need to know</h2>
+          <p>Each pillar can become its own page, post, card series, workshop topic, or social media campaign.</p>
+        </div>
+
+        <div class="card-grid guide-grid">
+          <article class="guide-card reveal">
+            <div class="icon-wrap">01</div>
+            <h3>Budgeting without burnout</h3>
+            <p>Track income, fixed costs, flexible spending, and hidden leaks. Show that budgeting is control, not restriction.</p>
+            <ul>
+              <li>Monthly budget template</li>
+              <li>Needs vs wants examples</li>
+              <li>Student-life spending tips</li>
+            </ul>
+          </article>
+
+          <article class="guide-card reveal">
+            <div class="icon-wrap">02</div>
+            <h3>Saving for safety, not just goals</h3>
+            <p>Teach emergency funds, small-step saving, and why “I’ll save later” keeps people financially exposed.</p>
+            <ul>
+              <li>Emergency buffer basics</li>
+              <li>Weekly saving challenges</li>
+              <li>Cash reserve mindset</li>
+            </ul>
+          </article>
+
+          <article class="guide-card reveal">
+            <div class="icon-wrap">03</div>
+            <h3>Debt and borrowed money</h3>
+            <p>Explain how quick money can become long-term stress. Focus on loans, BNPL, informal borrowing, and repayment planning.</p>
+            <ul>
+              <li>Before borrowing checklist</li>
+              <li>Debt warning signs</li>
+              <li>Healthy repayment priorities</li>
+            </ul>
+          </article>
+
+          <article class="guide-card reveal">
+            <div class="icon-wrap">04</div>
+            <h3>Scams and fake opportunities</h3>
+            <p>Help young people spot urgency, emotional manipulation, fake jobs, fake investments, and social media traps.</p>
+            <ul>
+              <li>Scam red flags</li>
+              <li>Pause-and-check method</li>
+              <li>How to verify before paying</li>
+            </ul>
+          </article>
+
+          <article class="guide-card reveal">
+            <div class="icon-wrap">05</div>
+            <h3>Money and psychology</h3>
+            <p>Connect financial choices to stress, shame, impulsivity, family beliefs, and the need for instant relief.</p>
+            <ul>
+              <li>Emotional spending triggers</li>
+              <li>Money beliefs exercise</li>
+              <li>Balanced decision habits</li>
+            </ul>
+          </article>
+
+          <article class="guide-card reveal">
+            <div class="icon-wrap">06</div>
+            <h3>First independent money plan</h3>
+            <p>Show what to do with a first stipend, salary, or side-income: split, protect, save, and spend intentionally.</p>
+            <ul>
+              <li>First paycheck roadmap</li>
+              <li>Simple rule-based planning</li>
+              <li>Next-step action list</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="reality-check">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Interactive self-check</span>
+          <h2>Which money pattern sounds most like you?</h2>
+          <p>Select what feels closest. The website will reveal the most likely pattern and give a practical tip.</p>
+        </div>
+
+        <div class="pattern-grid reveal" id="patternChoices">
+          <button class="pattern-card" data-pattern="spender">
+            <span class="pattern-title">Impulse Spender</span>
+            <small>I buy first and think later.</small>
+          </button>
+          <button class="pattern-card" data-pattern="avoider">
+            <span class="pattern-title">Money Avoider</span>
+            <small>I postpone checking balances and bills.</small>
+          </button>
+          <button class="pattern-card" data-pattern="rescuer">
+            <span class="pattern-title">Over-Helper</span>
+            <small>I lend money even when it harms me.</small>
+          </button>
+          <button class="pattern-card" data-pattern="risker">
+            <span class="pattern-title">Risk Chaser</span>
+            <small>I am tempted by fast profit and gambling-like offers.</small>
+          </button>
+          <button class="pattern-card" data-pattern="planner">
+            <span class="pattern-title">Planner in Progress</span>
+            <small>I try to stay organized but need stronger habits.</small>
+          </button>
+        </div>
+
+        <div class="result-box reveal" id="patternResult">
+          <h3>Your result will appear here</h3>
+          <p>Choose one pattern above to get a focused tip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="psychology">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Psychology of financial literacy</span>
+          <h2>Money decisions are often emotional before they become logical.</h2>
+          <p>
+            This section can connect your guide to the psychologist collaboration by showing how beliefs,
+            inner conflict, impulsivity, and stress influence financial behavior.
+          </p>
+        </div>
+
+        <div class="psych-grid">
+          <article class="psych-card reveal">
+            <h3>Impulsive mode</h3>
+            <p>“I want it now.” Spending becomes emotional relief, reward, or escape from discomfort.</p>
+          </article>
+          <article class="psych-card reveal">
+            <h3>Fearful mode</h3>
+            <p>“I never have enough.” Saving may become anxiety-driven rather than healthy and balanced.</p>
+          </article>
+          <article class="psych-card reveal">
+            <h3>Critical mode</h3>
+            <p>“You should not spend at all.” Extreme restriction can create guilt, shame, and later rebound spending.</p>
+          </article>
+          <article class="psych-card reveal highlight">
+            <h3>Balanced mode</h3>
+            <p>Pause, check facts, and decide from a calmer state. This is the habit the guide tries to strengthen.</p>
+          </article>
+        </div>
+
+        <div class="belief-workshop reveal">
+          <div class="belief-copy">
+            <h3>Money beliefs exercise</h3>
+            <p>Write the first thing that comes to mind for each sentence, then challenge it with evidence.</p>
+          </div>
+
+          <div class="belief-grid">
+            <label>
+              <span>Money is...</span>
+              <input type="text" placeholder="Write your belief" />
+            </label>
+            <label>
+              <span>Rich people are...</span>
+              <input type="text" placeholder="Write your belief" />
+            </label>
+            <label>
+              <span>Spending money means...</span>
+              <input type="text" placeholder="Write your belief" />
+            </label>
+            <label>
+              <span>I cannot afford...</span>
+              <input type="text" placeholder="Write your belief" />
+            </label>
+          </div>
+
+          <button class="btn btn-primary" id="beliefBtn">Generate reflection prompts</button>
+
+          <div class="reflection-box" id="beliefOutput">
+            <p>Your reflection prompts will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="budget-lab">
+      <div class="container budget-layout">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Budget lab</span>
+          <h2>Build a simple monthly plan</h2>
+          <p>Use this tool during the presentation as an interactive activity for the audience.</p>
+        </div>
+
+        <div class="budget-grid">
+          <form class="budget-form reveal" id="budgetForm">
+            <label>
+              <span>Monthly income</span>
+              <input type="number" id="income" min="0" placeholder="e.g. 120000" />
+            </label>
+            <label>
+              <span>Housing / transport</span>
+              <input type="number" id="needs" min="0" placeholder="e.g. 45000" />
+            </label>
+            <label>
+              <span>Food / essentials</span>
+              <input type="number" id="essentials" min="0" placeholder="e.g. 30000" />
+            </label>
+            <label>
+              <span>Leisure / shopping</span>
+              <input type="number" id="wants" min="0" placeholder="e.g. 20000" />
+            </label>
+            <label>
+              <span>Savings / emergency fund</span>
+              <input type="number" id="savings" min="0" placeholder="e.g. 15000" />
+            </label>
+            <label>
+              <span>Debt / repayments</span>
+              <input type="number" id="debt" min="0" placeholder="e.g. 5000" />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Calculate</button>
+              <button type="button" class="btn btn-secondary" id="fillExample">Use Example</button>
+            </div>
+          </form>
+
+          <div class="budget-output reveal">
+            <div class="output-card">
+              <span class="output-label">Remaining balance</span>
+              <strong id="remainingValue">₸0</strong>
+              <p id="budgetMessage">Enter your monthly numbers to see your result.</p>
+            </div>
+
+            <div class="bar-group">
+              <div class="bar-row">
+                <span>Needs</span>
+                <div class="bar-track"><div class="bar-fill" id="barNeeds"></div></div>
+                <strong id="labelNeeds">0%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Essentials</span>
+                <div class="bar-track"><div class="bar-fill" id="barEssentials"></div></div>
+                <strong id="labelEssentials">0%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Wants</span>
+                <div class="bar-track"><div class="bar-fill" id="barWants"></div></div>
+                <strong id="labelWants">0%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Savings</span>
+                <div class="bar-track"><div class="bar-fill" id="barSavings"></div></div>
+                <strong id="labelSavings">0%</strong>
+              </div>
+              <div class="bar-row">
+                <span>Debt</span>
+                <div class="bar-track"><div class="bar-fill" id="barDebt"></div></div>
+                <strong id="labelDebt">0%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Quick audience activity</span>
+          <h2>Money myth or money fact?</h2>
+          <p>This works well as an interactive presentation section to involve the audience.</p>
+        </div>
+
+        <div class="quiz-card reveal">
+          <div class="quiz-progress">
+            <span id="quizCount">Question 1 of 5</span>
+            <div class="progress-track"><div class="progress-fill" id="quizProgress"></div></div>
+          </div>
+
+          <h3 id="quizQuestion">Loading...</h3>
+
+          <div class="quiz-options" id="quizOptions"></div>
+
+          <div class="quiz-feedback" id="quizFeedback"></div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary" id="nextQuestion" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="slc">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">SLC journey</span>
+          <h2>How this website can document the whole project</h2>
+          <p>
+            This section is designed to help you present the 10 SLC challenges clearly, with actions,
+            evidence, impact, and next steps.
+          </p>
+        </div>
+
+        <div class="slc-tabs reveal" id="slcTabs">
+          <button class="tab-btn active" data-tab="c1">1</button>
+          <button class="tab-btn" data-tab="c2">2</button>
+          <button class="tab-btn" data-tab="c3">3</button>
+          <button class="tab-btn" data-tab="c4">4</button>
+          <button class="tab-btn" data-tab="c5">5</button>
+          <button class="tab-btn" data-tab="c6">6</button>
+          <button class="tab-btn" data-tab="c7">7</button>
+          <button class="tab-btn" data-tab="c8">8</button>
+          <button class="tab-btn" data-tab="c9">9</button>
+          <button class="tab-btn" data-tab="c10">10</button>
+        </div>
+
+        <div class="slc-panels reveal">
+          <article class="tab-panel active" id="c1">
+            <h3>Challenge 1 — Clarify Values</h3>
+            <p>Present your team values such as responsibility, honesty, empathy, prevention, and long-term thinking.</p>
+            <ul>
+              <li><strong>What to show:</strong> values poster, manifesto, or visual identity</li>
+              <li><strong>Why it matters:</strong> it explains the foundation of your project decisions</li>
+              <li><strong>Evidence ideas:</strong> value cards, design drafts, discussion notes, team agreement</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c2">
+            <h3>Challenge 2 — Set a Personal Example</h3>
+            <p>Show how team members modeled healthy money behavior, responsible planning, or active contribution.</p>
+            <ul>
+              <li><strong>What to show:</strong> personal actions, volunteer work, planning, content creation</li>
+              <li><strong>Why it matters:</strong> leadership becomes visible through action, not claims</li>
+              <li><strong>Evidence ideas:</strong> screenshots, production work, behind-the-scenes contributions</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c3">
+            <h3>Challenge 3 — Share a Vision</h3>
+            <p>Describe a future where young adults make calmer, safer, and more informed financial decisions.</p>
+            <ul>
+              <li><strong>What to show:</strong> your vision statement and audience-centered future scene</li>
+              <li><strong>Why it matters:</strong> it makes the project inspiring instead of only descriptive</li>
+              <li><strong>Evidence ideas:</strong> vision page, slogan, campaign headline, concept sketches</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c4">
+            <h3>Challenge 4 — Enlist Others</h3>
+            <p>Document how you used websites, posters, social posts, or events to attract attention and support.</p>
+            <ul>
+              <li><strong>What to show:</strong> outreach materials and audience interaction</li>
+              <li><strong>Why it matters:</strong> support and engagement demonstrate real communication</li>
+              <li><strong>Evidence ideas:</strong> posters, QR codes, page links, comments, view counts</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c5">
+            <h3>Challenge 5 — Search for Opportunities</h3>
+            <p>Highlight your research, expert interview work, stakeholder outreach, and the gaps you identified.</p>
+            <ul>
+              <li><strong>What to show:</strong> interview with an expert, findings, audience needs, risks</li>
+              <li><strong>Why it matters:</strong> this proves depth, not just surface-level ideas</li>
+              <li><strong>Evidence ideas:</strong> interview links, notes, summary cards, question lists</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c6">
+            <h3>Challenge 6 — Experiment and Take Risks</h3>
+            <p>Show how you turned research into action through a creative financial literacy initiative or event.</p>
+            <ul>
+              <li><strong>What to show:</strong> campaign concept, interactive site, audience activity, outcomes</li>
+              <li><strong>Why it matters:</strong> this is where the project becomes initiative-driven</li>
+              <li><strong>Evidence ideas:</strong> event pages, participation records, photos, results, reflections</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c7">
+            <h3>Challenge 7 — Foster Collaboration</h3>
+            <p>Feature collaboration with a psychologist or another relevant expert to deepen the project’s impact.</p>
+            <ul>
+              <li><strong>What to show:</strong> psychology meeting, guest session, Q&amp;A, prize activity, and shared insights</li>
+              <li><strong>Why it matters:</strong> external collaboration strengthens credibility and reach</li>
+              <li><strong>Evidence ideas:</strong> presentation slides, event photos, attendance, prizes, feedback</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c8">
+            <h3>Challenge 8 — Strengthen Others</h3>
+            <p>Use this guide itself as evidence that you empowered peers with tools, reflection prompts, and practical advice.</p>
+            <ul>
+              <li><strong>What to show:</strong> downloadable guide, checklist, workshop activity, audience learning</li>
+              <li><strong>Why it matters:</strong> it proves your project helped others grow</li>
+              <li><strong>Evidence ideas:</strong> testimonials, quiz use, downloads, skill-based activities</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c9">
+            <h3>Challenge 9 — Recognize Contributions</h3>
+            <p>Thank teammates, guest speakers, participants, and supporters who helped move the project forward.</p>
+            <ul>
+              <li><strong>What to show:</strong> acknowledgment board or appreciation section</li>
+              <li><strong>Why it matters:</strong> it demonstrates team culture and leadership maturity</li>
+              <li><strong>Evidence ideas:</strong> names, roles, thank-you messages, contribution highlights</li>
+            </ul>
+          </article>
+
+          <article class="tab-panel" id="c10">
+            <h3>Challenge 10 — Celebrate Values and Victories</h3>
+            <p>Close with outcomes, lessons, achievements, and the value of continuing this work beyond one project.</p>
+            <ul>
+              <li><strong>What to show:</strong> final impact summary and team reflection</li>
+              <li><strong>Why it matters:</strong> it turns your project into a complete leadership story</li>
+              <li><strong>Evidence ideas:</strong> final montage, summary numbers, reflections, audience response</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="eyebrow">Project resources</span>
+          <h2>Useful links and evidence hub</h2>
+          <p>Connect your existing work so the website becomes a central guide and evidence platform.</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Website</span>
+            <h3>Main SLC Page</h3>
+            <p>Use as the starting point for your financial literacy project journey.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/2nd-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>2nd Challenge</h3>
+            <p>Link this as part of your evidence and development timeline.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/3rd-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>3rd Challenge</h3>
+            <p>Show vision-building and content progress.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/4th-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>4th Challenge</h3>
+            <p>Use for outreach and audience engagement evidence.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/5th-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>5th Challenge</h3>
+            <p>Useful for interview-based insights and research findings.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/6th-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>6th Challenge</h3>
+            <p>Connect it to experimentation, risk-taking, and initiative-based action.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://fin-literacy.my.canva.site/7th-challenge" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Challenge Page</span>
+            <h3>7th Challenge</h3>
+            <p>Feature collaboration, psychologist insights, and event reflections.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://www.youtube.com/watch?v=XHT-7paMjgE&t=2s" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Video</span>
+            <h3>YouTube Interview / Media</h3>
+            <p>Add video evidence, subtitles, and key takeaways from the project work.</p>
+          </a>
+
+          <a class="resource-card reveal" href="https://docs.google.com/presentation/d/1Ug_PcnErNDOEGek8cB9uqMkL2RHvtKZU/edit?rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+            <span class="resource-type">Slides</span>
+            <h3>Psychologist Presentation</h3>
+            <p>Useful for the money psychology section, event evidence, and collaboration material.</p>
+          </a>
+
+          <div class="resource-card reveal static-card">
+            <span class="resource-type">Add More</span>
+            <h3>Internal docs & evidence</h3>
+            <p>Add your interview notes, screenshots, posters, survey visuals, and any final supporting files here.</p>
+          </div>
+        </div>
+
+        <div class="final-banner reveal">
+          <div>
+            <span class="eyebrow">Presentation tip</span>
+            <h3>Use this website as both a guide and a showcase.</h3>
+            <p>
+              It can explain the issue, teach the audience, document your actions, and demonstrate impact in one place.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Money Moves</strong>
+        <p>A modern financial literacy guide for young adults, designed as an SLC project website.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#guide">Guide</a>
+        <a href="#psychology">Psychology</a>
+        <a href="#budget-lab">Budget Lab</a>
+        <a href="#slc">SLC Journey</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
