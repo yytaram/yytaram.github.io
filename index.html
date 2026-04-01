@@ -1,1019 +1,702 @@
 <!doctype html>
-<html lang="en-GB" data-theme="auto">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="A polished, interactive Student Leadership Challenge (SLC) project website (Kazakhstan). Built with plain HTML, CSS, and vanilla JavaScript." />
-  <title>SLC Project • Student Leadership Challenge</title>
+  <meta name="description" content="Money Talks — a modern, interactive financial literacy guide for young adults. Build habits, reduce risk, and take control of your money." />
+  <title>Money Talks — Financial Literacy Guide</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Inline icon symbols (no external assets) -->
-  <svg class="visually-hidden" width="0" height="0" aria-hidden="true" focusable="false">
-    <symbol id="i-sun" viewBox="0 0 24 24">
-      <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-16V0m0 24v-2m10-10h2M0 12h2m16.95 6.95 1.41 1.41M5.64 5.64 4.22 4.22m14.14 0 1.41-1.41M5.64 18.36 4.22 19.78" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24">
-      <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7.5 7.5 0 1 0 11.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24">
-      <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="i-close" viewBox="0 0 24 24">
-      <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="i-arrow-up" viewBox="0 0 24 24">
-      <path d="M12 19V6m0 0 5 5m-5-5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-arrow-right" viewBox="0 0 24 24">
-      <path d="M5 12h14m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-check" viewBox="0 0 24 24">
-      <path d="M20 7 10 17l-5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24">
-      <path d="M12 2l1.6 5.1L19 9l-5.4 1.9L12 16l-1.6-5.1L5 9l5.4-1.9L12 2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-people" viewBox="0 0 24 24">
-      <path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 2c-2.2 0-4 1.2-4 3v2h8v-2c0-1.8-1.8-3-4-3ZM8 13c-2.2 0-4 1.2-4 3v2h8v-2c0-1.8-1.8-3-4-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-target" viewBox="0 0 24 24">
-      <path d="M12 21a9 9 0 1 1 9-9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-      <path d="M12 17a5 5 0 1 1 5-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-      <path d="M12 13a1 1 0 1 0-1-1 1 1 0 0 0 1 1Z" fill="currentColor"/>
-      <path d="M22 2l-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24">
-      <path d="M12 2 20 6v6c0 6-4.2 9.4-8 10-3.8-.6-8-4-8-10V6l8-4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-      <path d="M9.5 12.2 11.3 14l3.9-4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-  </svg>
-
   <header class="site-header" id="top">
-    <div class="header-surface">
-      <nav class="nav container" aria-label="Primary">
-        <a class="brand" href="#home" aria-label="Go to the top of the page">
-          <span class="brand__mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" class="brand__icon" aria-hidden="true">
-              <path d="M12 2l8 4v6c0 6-4.2 9.4-8 10-3.8-.6-8-4-8-10V6l8-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M8 12h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M12 8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="brand__text">
-            <span class="brand__title">SLC Project</span>
-            <span class="brand__subtitle" data-bind="teamName">[INSERT TEAM NAME]</span>
-          </span>
-        </a>
+    <div class="container header-inner">
+      <a class="brand" href="#home" data-link aria-label="Money Talks — Home">
+        <span class="brand-mark" aria-hidden="true">♠</span>
+        <span class="brand-text">
+          <span class="brand-title">Money Talks</span>
+          <span class="brand-subtitle">A guide for young adults (18–27)</span>
+        </span>
+      </a>
 
-        <div class="nav__right">
-          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme" aria-pressed="false">
-            <span class="icon-btn__icon" aria-hidden="true">
-              <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
-                <use href="#i-moon"></use>
-              </svg>
-            </span>
-            <span class="icon-btn__text" id="themeToggleText">Theme</span>
-          </button>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+          <span class="icon burger" aria-hidden="true"></span>
+        </button>
 
-          <button class="icon-btn nav__toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
-            <span class="icon-btn__icon" aria-hidden="true">
-              <svg class="icon" width="22" height="22" viewBox="0 0 24 24">
-                <use href="#i-menu"></use>
-              </svg>
-            </span>
-            <span class="icon-btn__text">Menu</span>
-          </button>
-        </div>
-
-        <div class="nav__menu" id="navMenu">
-          <ul class="nav__links" role="list">
-            <li><a class="nav__link" href="#issue">Issue</a></li>
-            <li><a class="nav__link" href="#audience">Audience</a></li>
-            <li><a class="nav__link" href="#challenges">Challenges</a></li>
-            <li><a class="nav__link" href="#impact">Impact</a></li>
-            <li><a class="nav__link" href="#gallery">Gallery</a></li>
-            <li><a class="nav__link" href="#collaboration">Collaboration</a></li>
-            <li><a class="nav__link" href="#testimonials">Testimonials</a></li>
-            <li><a class="nav__link" href="#engage">Engage</a></li>
-            <li><a class="nav__link" href="#reflection">Reflection</a></li>
-            <li><a class="nav__link" href="#references">References</a></li>
-          </ul>
-
-          <a class="btn btn--primary nav__cta" href="#references" data-focus="feedbackForm">
-            Share feedback
-            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <use href="#i-arrow-right"></use>
-            </svg>
-          </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#learn" data-link>Learn</a>
+          <a href="#tools" data-link>Tools</a>
+          <a href="#cards" data-link>Cards</a>
+          <a href="#plan" data-link>7‑Day Plan</a>
+          <a href="#journey" data-link>Our SLC Journey</a>
+          <a href="#resources" data-link>Resources</a>
         </div>
       </nav>
+
+      <div class="header-actions">
+        <button class="pill" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span class="pill-ic" aria-hidden="true">◐</span>
+          <span class="pill-tx">Theme</span>
+        </button>
+        <button class="pill" id="openSettings" type="button" aria-haspopup="dialog">
+          <span class="pill-ic" aria-hidden="true">⚙</span>
+          <span class="pill-tx">Settings</span>
+        </button>
+      </div>
     </div>
-    <div class="nav-overlay" id="navOverlay" hidden></div>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
+  <main id="main" class="site-main">
     <section id="home" class="section hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="blob blob--a"></div>
-        <div class="blob blob--b"></div>
-        <div class="grid-glow"></div>
-      </div>
-
-      <div class="container hero__layout">
-        <div class="hero__content">
-          <div class="eyebrow">
-            <span class="pill">
-              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                <use href="#i-spark"></use>
-              </svg>
-              Student Leadership Challenge • Kazakhstan
-            </span>
-            <span class="pill pill--quiet" id="customiseHint" hidden>
-              Bracketed text needs editing before presenting
-            </span>
-          </div>
-
-          <h1 class="hero__title">
-            <span class="hero__titleTop">Project:</span>
-            <span class="hero__titleMain" data-bind="issueTitle">[INSERT YOUR SOCIAL ISSUE HERE]</span>
-          </h1>
-
-          <p class="hero__lead">
-            We are <strong data-bind="teamNameStrong">[INSERT TEAM NAME]</strong>. Our mission is to
-            <span data-bind="mainGoal">[INSERT MAIN GOAL]</span>.
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Choose a card. Reveal a financial truth.</p>
+          <h1>Build money confidence — without the cringe.</h1>
+          <p class="lead">
+            Money Talks is a practical, gamified guide to financial literacy built for young adults.
+            Learn the basics, spot traps, and build habits that actually stick.
           </p>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#challenges">
-              Explore our SLC actions
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                <use href="#i-arrow-right"></use>
-              </svg>
+          <div class="cta-row">
+            <a class="btn primary" href="#checkin" data-link>
+              <span class="btn-ic" aria-hidden="true">✓</span>
+              Start the 3‑minute check‑in
             </a>
-            <a class="btn btn--ghost" href="#engage">Try the mini quiz</a>
+            <a class="btn" href="#cards" data-link>
+              <span class="btn-ic" aria-hidden="true">🂠</span>
+              Pick a Money Talks card
+            </a>
           </div>
 
-          <div class="hero__chips" aria-label="Project highlights">
-            <div class="chip">
-              <div class="chip__kicker">Team</div>
-              <div class="chip__value" data-bind="teamName">[INSERT TEAM NAME]</div>
-            </div>
-            <div class="chip">
-              <div class="chip__kicker">Target audience</div>
-              <div class="chip__value" data-bind="targetAudience">[INSERT TARGET AUDIENCE]</div>
-            </div>
-            <div class="chip">
-              <div class="chip__kicker">Visual mood</div>
-              <div class="chip__value" data-bind="visualMood">[INSERT VISUAL STYLE, e.g. dark elegant / modern academic / energetic youth campaign]</div>
-            </div>
-          </div>
-        </div>
-
-        <aside class="hero__card reveal" data-reveal>
-          <div class="card card--glass">
-            <div class="card__header">
-              <h2 class="card__title">Project snapshot</h2>
-              <span class="badge" id="projectStatusBadge">Presentation-ready template</span>
+          <div class="hero-stats" aria-label="Your progress">
+            <div class="stat-card">
+              <div class="stat-top">
+                <span class="stat-kicker">Your progress</span>
+                <button class="link-btn" id="resetProgress" type="button">Reset</button>
+              </div>
+              <div class="progress-row">
+                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-metric">
+                  <span class="progress-val" id="progressPct">0%</span>
+                  <span class="progress-lbl">completed</span>
+                </div>
+              </div>
+              <div class="badge-row" id="badgeRow" aria-label="Badges"></div>
             </div>
 
-            <div class="snapshot">
-              <div class="snapshot__row">
-                <div class="snapshot__label">Focus</div>
-                <div class="snapshot__value" data-bind="issueTitle">[INSERT YOUR SOCIAL ISSUE HERE]</div>
+            <div class="stat-card">
+              <span class="stat-kicker">Today’s quick win</span>
+              <div class="quick-win" id="quickWin">
+                <p class="quick-win-title">Loading…</p>
+                <p class="quick-win-body"> </p>
               </div>
-              <div class="snapshot__row">
-                <div class="snapshot__label">What we documented</div>
-                <div class="snapshot__value">Evidence, outreach, collaboration, reflection, and results.</div>
-              </div>
-              <div class="snapshot__row">
-                <div class="snapshot__label">How it works</div>
-                <div class="snapshot__value">Single-page site with interactive sections and offline-ready features.</div>
+              <div class="quick-win-actions">
+                <button class="btn small" id="newQuickWin" type="button">New tip</button>
+                <button class="btn small ghost" id="markQuickWinDone" type="button">Mark done</button>
               </div>
             </div>
-
-            <div class="mini-checklist" aria-label="Built-in features checklist">
-              <div class="mini-checklist__item">
-                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
-                Sticky navigation + active section highlight
-              </div>
-              <div class="mini-checklist__item">
-                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
-                Dark / light mode (saved on this device)
-              </div>
-              <div class="mini-checklist__item">
-                <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"></use></svg>
-                Gallery modal + testimonial slider + quiz
-              </div>
-            </div>
-
-            <div class="card__actions">
-              <a class="btn btn--soft" href="#gallery">Open evidence gallery</a>
-              <a class="btn btn--soft" href="#references">Add references</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT ISSUE -->
-    <section id="issue" class="section">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">About the SLC issue</h2>
-          <p class="section__subtitle">
-            This project focuses on <strong data-bind="issueTitle">[INSERT YOUR SOCIAL ISSUE HERE]</strong>.
-            The goal is to present the real context in Kazakhstan, explain why it matters, and show concrete action across all SLC challenges.
-          </p>
-        </header>
-
-        <div class="grid grid--cards">
-          <article class="card reveal" data-reveal>
-            <div class="card__icon" aria-hidden="true">
-              <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-target"></use></svg>
-            </div>
-            <h3 class="card__title">What the issue is</h3>
-            <p class="card__text">
-              <strong data-bind="issueTitle">[INSERT YOUR SOCIAL ISSUE HERE]</strong> affects everyday choices, wellbeing, and opportunities.
-              In our community, we noticed it through conversations, classroom experiences, and local examples.
-            </p>
-            <p class="card__hint">[Insert a short definition and 1–2 local observations here]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <div class="card__icon" aria-hidden="true">
-              <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-shield"></use></svg>
-            </div>
-            <h3 class="card__title">Why it matters in Kazakhstan</h3>
-            <p class="card__text">
-              This issue connects to health, education, safety, and social trust. Addressing it helps build stronger, more supportive communities.
-              We focused on impact that is visible at school and scalable to wider community settings.
-            </p>
-            <p class="card__hint">[Insert Kazakhstan-specific context, examples, or references here]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <div class="card__icon" aria-hidden="true">
-              <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-spark"></use></svg>
-            </div>
-            <h3 class="card__title">Why we chose it</h3>
-            <p class="card__text">
-              We chose this topic because it is relevant to students and families now, and because we believed we could create measurable awareness and practical support.
-              We also wanted a project where meaningful change starts with everyday leadership.
-            </p>
-            <p class="card__hint">[Insert your personal story, motivation, or triggering moment here]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <div class="card__icon" aria-hidden="true">
-              <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-people"></use></svg>
-            </div>
-            <h3 class="card__title">Who is most affected</h3>
-            <p class="card__text">
-              The people most affected depend on the nature of the issue, but it often includes students, families, and those with limited access to support.
-              In this project, we centred the needs of <strong data-bind="targetAudience">[INSERT TARGET AUDIENCE]</strong>.
-            </p>
-            <p class="card__hint">[Insert who is most affected, and why]</p>
-          </article>
-        </div>
-
-        <div class="callout reveal" data-reveal>
-          <div class="callout__icon" aria-hidden="true">
-            <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-spark"></use></svg>
-          </div>
-          <div class="callout__content">
-            <h3 class="callout__title">Our project purpose</h3>
-            <p class="callout__text">
-              We are not claiming final solutions. We are demonstrating leadership: listening carefully, testing actions, collaborating, and documenting evidence of impact and learning.
-            </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- AUDIENCE -->
-    <section id="audience" class="section section--alt">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Audience and stakeholders</h2>
-          <p class="section__subtitle">
-            Our main audience is <strong data-bind="targetAudience">[INSERT TARGET AUDIENCE]</strong>.
-            We also mapped the wider stakeholders who influence outcomes and sustainability.
-          </p>
-        </header>
-
-        <div class="audience-layout">
-          <div class="audience-cards">
-            <article class="card card--tight reveal" data-reveal>
-              <h3 class="card__title">Primary audience</h3>
-              <p class="card__text">
-                <strong data-bind="targetAudience">[INSERT TARGET AUDIENCE]</strong>
-              </p>
-              <ul class="list list--ticks">
-                <li>What they need: clear information + practical support.</li>
-                <li>What we offered: student-friendly resources, activities, and a safe way to share feedback.</li>
-                <li>How we measured: attendance, responses, reflections, and agreed evidence.</li>
+        <div class="hero-panels">
+          <div class="panel glass">
+            <div class="panel-head">
+              <span class="pill chip">Your path</span>
+              <span class="muted">Personalised in minutes</span>
+            </div>
+            <div class="panel-body">
+              <ul class="tick-list" id="pathPreview">
+                <li>Figure out where your money goes.</li>
+                <li>Build a budget that fits real life.</li>
+                <li>Spot traps: debt, scams, risky bets.</li>
+                <li>Turn habits into a system.</li>
               </ul>
-              <p class="card__hint">[Insert the most important audience needs here]</p>
-            </article>
-
-            <article class="card card--tight reveal" data-reveal>
-              <h3 class="card__title">School community</h3>
-              <ul class="list list--ticks">
-                <li>Teachers and mentors: guide and amplify.</li>
-                <li>School leadership: enables approvals, space, and time.</li>
-                <li>Student leaders: model behaviour and keep momentum.</li>
-              </ul>
-              <p class="card__hint">[Insert your school context and stakeholders]</p>
-            </article>
-
-            <article class="card card--tight reveal" data-reveal>
-              <h3 class="card__title">Families and local community</h3>
-              <ul class="list list--ticks">
-                <li>Parents/guardians: reinforcement at home.</li>
-                <li>Community experts: credibility and professional guidance.</li>
-                <li>Local organisations: resources and reach.</li>
-              </ul>
-              <p class="card__hint">[Insert which community partners matter most]</p>
-            </article>
-          </div>
-
-          <div class="stakeholder-map card reveal" data-reveal>
-            <div class="stakeholder-map__header">
-              <h3 class="card__title">Stakeholder map</h3>
-              <p class="card__text">
-                This map shows who has the highest influence and who experiences the strongest impact from the issue.
-                Use it to justify your outreach and collaboration choices.
-              </p>
-            </div>
-
-            <div class="map">
-              <div class="map__axis map__axis--x">Influence (low → high)</div>
-              <div class="map__axis map__axis--y">Impact (low → high)</div>
-
-              <div class="map__grid" aria-label="Stakeholder map quadrants">
-                <div class="map__cell">
-                  <div class="map__cellTitle">Inform</div>
-                  <p class="map__cellText">Students not yet engaged, wider peers.</p>
-                  <p class="map__cellHint">[Insert group]</p>
-                </div>
-                <div class="map__cell">
-                  <div class="map__cellTitle">Partner</div>
-                  <p class="map__cellText">School leaders, key organisations.</p>
-                  <p class="map__cellHint">[Insert partners]</p>
-                </div>
-                <div class="map__cell">
-                  <div class="map__cellTitle">Support</div>
-                  <p class="map__cellText">Families, class teachers, volunteers.</p>
-                  <p class="map__cellHint">[Insert supporters]</p>
-                </div>
-                <div class="map__cell">
-                  <div class="map__cellTitle">Listen first</div>
-                  <p class="map__cellText">Those most affected; build trust.</p>
-                  <p class="map__cellHint">[Insert most affected]</p>
-                </div>
-              </div>
-
-              <div class="map__note">
-                <strong>Tip:</strong> For your final presentation, replace every bracketed line with your real stakeholder groups.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHALLENGES -->
-    <section id="challenges" class="section">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">SLC challenges overview</h2>
-          <p class="section__subtitle">
-            Explore evidence-based actions across all 10 Student Leadership Challenge practices.
-            Select a challenge to view: what we did, why it mattered, evidence/results, and impact/takeaway.
-          </p>
-        </header>
-
-        <div class="challenges-ui reveal" data-reveal>
-          <div class="challenges-ui__top">
-            <div class="tabs" role="tablist" aria-label="SLC challenges" id="challengeTabs">
-              <!-- JS injects tabs -->
-            </div>
-
-            <div class="tabs-meta">
-              <span class="badge badge--soft" id="selectedChallengeBadge">Remembered on this device</span>
-              <button class="btn btn--soft btn--small" type="button" id="resetChallengeChoice">
-                Reset selection
-              </button>
-            </div>
-          </div>
-
-          <div class="challenge-panel card" id="challengePanel" role="tabpanel" tabindex="-1" aria-label="Selected challenge details">
-            <!-- JS injects panel content -->
-            <noscript>
-              <p><strong>JavaScript is required</strong> to view the interactive SLC challenges panel.</p>
-            </noscript>
-          </div>
-
-          <div class="challenge-evidence-note">
-            <strong>Evidence guidance:</strong> Replace every bracketed line (e.g. <span class="mono">[Insert real evidence here]</span>) with your real photos, links, screenshots, certificates, or survey summaries.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPACT -->
-    <section id="impact" class="section section--alt">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Evidence and impact</h2>
-          <p class="section__subtitle">
-            These counters use a live count-up animation. The numbers below are clearly marked placeholders—replace them with your verified project data.
-          </p>
-        </header>
-
-        <div class="stats-grid">
-          <article class="stat card reveal" data-reveal>
-            <div class="stat__top">
-              <div class="stat__label">Participants reached</div>
-              <div class="stat__num" data-counter data-target="120" data-suffix="+">0</div>
-            </div>
-            <p class="stat__note">Placeholder — replace with <strong>[Insert participant number]</strong>.</p>
-          </article>
-
-          <article class="stat card reveal" data-reveal>
-            <div class="stat__top">
-              <div class="stat__label">Outreach posts</div>
-              <div class="stat__num" data-counter data-target="18">0</div>
-            </div>
-            <p class="stat__note">Placeholder — replace with <strong>[Insert outreach post count]</strong>.</p>
-          </article>
-
-          <article class="stat card reveal" data-reveal>
-            <div class="stat__top">
-              <div class="stat__label">Events / sessions</div>
-              <div class="stat__num" data-counter data-target="4">0</div>
-            </div>
-            <p class="stat__note">Placeholder — replace with <strong>[Insert event count]</strong>.</p>
-          </article>
-
-          <article class="stat card reveal" data-reveal>
-            <div class="stat__top">
-              <div class="stat__label">Collaborators</div>
-              <div class="stat__num" data-counter data-target="7">0</div>
-            </div>
-            <p class="stat__note">Placeholder — replace with <strong>[Insert collaborator count]</strong>.</p>
-          </article>
-
-          <article class="stat card reveal" data-reveal>
-            <div class="stat__top">
-              <div class="stat__label">Feedback responses</div>
-              <div class="stat__num" data-counter data-target="55" data-suffix="+">0</div>
-            </div>
-            <p class="stat__note">Placeholder — replace with <strong>[Insert feedback count]</strong>.</p>
-          </article>
-        </div>
-
-        <div class="callout reveal" data-reveal>
-          <div class="callout__icon" aria-hidden="true">
-            <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-shield"></use></svg>
-          </div>
-          <div class="callout__content">
-            <h3 class="callout__title">Integrity note</h3>
-            <p class="callout__text">
-              When you replace placeholders, keep a simple audit trail (e.g. attendance sheet, screenshots, sign-in QR logs, survey exports).
-              This helps you defend your results confidently during your SLC presentation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Gallery and evidence</h2>
-          <p class="section__subtitle">
-            Click an item to open a lightbox with a larger preview and caption. Replace placeholders with real photos, posters, certificates, or screenshots.
-          </p>
-        </header>
-
-        <div class="gallery-toolbar reveal" data-reveal>
-          <div class="filters" aria-label="Gallery filters">
-            <button class="chip-btn is-active" type="button" data-gallery-filter="all">All</button>
-            <button class="chip-btn" type="button" data-gallery-filter="event">Events</button>
-            <button class="chip-btn" type="button" data-gallery-filter="social">Social media</button>
-            <button class="chip-btn" type="button" data-gallery-filter="poster">Posters</button>
-            <button class="chip-btn" type="button" data-gallery-filter="certificate">Certificates</button>
-            <button class="chip-btn" type="button" data-gallery-filter="data">Surveys/data</button>
-          </div>
-
-          <div class="gallery-toolbar__hint">
-            <span class="badge badge--soft">Tip: Add your own items in <span class="mono">script.js</span></span>
-          </div>
-        </div>
-
-        <div class="gallery-grid" id="galleryGrid" aria-label="Evidence gallery">
-          <!-- JS injects gallery items -->
-          <noscript>
-            <p><strong>JavaScript is required</strong> to view the interactive gallery.</p>
-          </noscript>
-        </div>
-      </div>
-    </section>
-
-    <!-- COLLABORATION -->
-    <section id="collaboration" class="section section--alt">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Collaboration</h2>
-          <p class="section__subtitle">
-            Real change scales through partnerships. Add the people and organisations who supported your project and specify their role and contribution.
-          </p>
-        </header>
-
-        <div class="grid grid--cards">
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">School mentor</h3>
-            <p class="card__text"><strong>[Insert teacher/mentor name]</strong></p>
-            <p class="card__text">Contribution: helped with planning, safeguarding, communication, and reflection quality.</p>
-            <p class="card__hint">[Insert evidence: mentor sign-off, meeting notes]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Guest speaker / expert</h3>
-            <p class="card__text"><strong>[Insert specialist name + role]</strong></p>
-            <p class="card__text">Contribution: delivered a short session, Q&amp;A, or reviewed our materials for accuracy and safety.</p>
-            <p class="card__hint">[Insert evidence: photo, certificate, agenda]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Partner organisation</h3>
-            <p class="card__text"><strong>[Insert organisation name]</strong></p>
-            <p class="card__text">Contribution: provided resources, outreach support, or helped connect us to the wider community.</p>
-            <p class="card__hint">[Insert evidence: email confirmation, logo permission]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Student volunteers</h3>
-            <p class="card__text"><strong>[Insert volunteer group/class]</strong></p>
-            <p class="card__text">Contribution: supported event setup, peer outreach, translation, or survey distribution.</p>
-            <p class="card__hint">[Insert evidence: volunteer list, group photo]</p>
-          </article>
-        </div>
-
-        <div class="callout reveal" data-reveal>
-          <div class="callout__icon" aria-hidden="true">
-            <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-people"></use></svg>
-          </div>
-          <div class="callout__content">
-            <h3 class="callout__title">Collaboration quality checks</h3>
-            <p class="callout__text">
-              Be specific: who did what, when, and what difference it made.
-              This section is high-value evidence for “Foster Collaboration”, “Strengthen Others”, and “Recognise Contributions”.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Feedback and testimonials</h2>
-          <p class="section__subtitle">
-            Short, authentic quotes show human impact. Replace these with real comments from students, parents, teachers, or stakeholders.
-          </p>
-        </header>
-
-        <div class="slider card reveal" data-reveal id="testimonialSlider" aria-label="Testimonial carousel">
-          <div class="slider__track" id="testimonialTrack">
-            <article class="testimonial" aria-label="Testimonial 1">
-              <p class="testimonial__quote">
-                “This project helped me understand the issue in a calmer, more practical way. I felt listened to, not judged.”
-              </p>
-              <div class="testimonial__meta">
-                <span class="testimonial__name">[Insert student name]</span>
-                <span class="testimonial__role">Student participant</span>
-              </div>
-              <p class="testimonial__hint">[Insert evidence: screenshot of feedback, anonymised if needed]</p>
-            </article>
-
-            <article class="testimonial" aria-label="Testimonial 2">
-              <p class="testimonial__quote">
-                “The team communicated clearly, organised responsibly, and used feedback to improve the next session.”
-              </p>
-              <div class="testimonial__meta">
-                <span class="testimonial__name">[Insert teacher name]</span>
-                <span class="testimonial__role">Teacher / mentor</span>
-              </div>
-              <p class="testimonial__hint">[Insert evidence: mentor note]</p>
-            </article>
-
-            <article class="testimonial" aria-label="Testimonial 3">
-              <p class="testimonial__quote">
-                “I appreciate the respectful tone and the practical resources—especially the parts that parents can use at home.”
-              </p>
-              <div class="testimonial__meta">
-                <span class="testimonial__name">[Insert parent name]</span>
-                <span class="testimonial__role">Parent / guardian</span>
-              </div>
-              <p class="testimonial__hint">[Insert evidence: message screenshot (with permission)]</p>
-            </article>
-
-            <article class="testimonial" aria-label="Testimonial 4">
-              <p class="testimonial__quote">
-                “It’s rare to see students document their work so well. The evidence made the impact credible.”
-              </p>
-              <div class="testimonial__meta">
-                <span class="testimonial__name">[Insert stakeholder name]</span>
-                <span class="testimonial__role">Community stakeholder</span>
-              </div>
-              <p class="testimonial__hint">[Insert evidence: stakeholder email]</p>
-            </article>
-          </div>
-
-          <div class="slider__controls" aria-label="Carousel controls">
-            <button class="icon-btn" type="button" id="testimonialPrev" aria-label="Previous testimonial">
-              <span class="icon-btn__icon" aria-hidden="true">
-                <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
-                  <path d="M15 18 9 12l6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="icon-btn__text">Prev</span>
-            </button>
-
-            <div class="dots" id="testimonialDots" aria-label="Testimonial position">
-              <!-- JS injects dots -->
-            </div>
-
-            <button class="icon-btn" type="button" id="testimonialNext" aria-label="Next testimonial">
-              <span class="icon-btn__icon" aria-hidden="true">
-                <svg class="icon" width="20" height="20" viewBox="0 0 24 24">
-                  <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span class="icon-btn__text">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENGAGE / INTERACTIVE -->
-    <section id="engage" class="section section--alt">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Interactive element</h2>
-          <p class="section__subtitle">
-            This mini quiz is designed for engagement during a presentation or open day. The result is stored on this device only (LocalStorage).
-          </p>
-        </header>
-
-        <div class="engage-grid">
-          <div class="card reveal" data-reveal>
-            <div class="card__header">
-              <h3 class="card__title">Mini quiz: understand the project</h3>
-              <span class="badge badge--soft" id="quizSavedBadge">Saved locally</span>
-            </div>
-
-            <div class="saved-result" id="quizSavedResult" hidden>
-              <!-- JS injects last saved result -->
-            </div>
-
-            <form class="quiz" id="quizForm" novalidate>
-              <fieldset class="quiz__q">
-                <legend>1) Our issue is:</legend>
-                <label class="radio">
-                  <input type="radio" name="q1" value="a" />
-                  <span>A local topic we chose randomly.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q1" value="b" />
-                  <span><strong data-bind="issueTitle">[INSERT YOUR SOCIAL ISSUE HERE]</strong> — chosen because it affects real people in Kazakhstan and we can act responsibly.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q1" value="c" />
-                  <span>Something we researched but did not act on.</span>
-                </label>
-              </fieldset>
-
-              <fieldset class="quiz__q">
-                <legend>2) Our main audience is:</legend>
-                <label class="radio">
-                  <input type="radio" name="q2" value="a" />
-                  <span>Only the SLC judges.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q2" value="b" />
-                  <span><strong data-bind="targetAudience">[INSERT TARGET AUDIENCE]</strong> and related stakeholders who influence outcomes.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q2" value="c" />
-                  <span>Only online followers.</span>
-                </label>
-              </fieldset>
-
-              <fieldset class="quiz__q">
-                <legend>3) Good evidence in an SLC project includes:</legend>
-                <label class="radio">
-                  <input type="radio" name="q3" value="a" />
-                  <span>Only one photo without context.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q3" value="b" />
-                  <span>A mix of visuals, feedback, planning documents, and clear reflection showing what changed.</span>
-                </label>
-                <label class="radio">
-                  <input type="radio" name="q3" value="c" />
-                  <span>Only a final speech.</span>
-                </label>
-              </fieldset>
-
-              <div class="quiz__actions">
-                <button class="btn btn--primary" type="submit">Check my answers</button>
-                <button class="btn btn--soft" type="button" id="quizReset">Reset</button>
-              </div>
-
-              <div class="form-msg" id="quizMsg" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-
-          <div class="card reveal" data-reveal>
-            <h3 class="card__title">Audience prompt (for presentations)</h3>
-            <p class="card__text">
-              Use this prompt to collect quick, meaningful input at the end of your talk. It also produces a small summary you can screenshot as evidence.
-            </p>
-
-            <form class="pulse" id="pulseForm" novalidate>
-              <label class="label" for="pulseChoice">Which part of the project felt most useful to you?</label>
-              <select id="pulseChoice" name="pulseChoice" required>
-                <option value="" selected disabled>Choose one option</option>
-                <option value="awareness">Awareness / understanding the issue</option>
-                <option value="tools">Practical tools/resources</option>
-                <option value="collab">Collaboration with others</option>
-                <option value="reflection">Reflection &amp; lessons learned</option>
-              </select>
-
-              <label class="label" for="pulseText">One sentence: what would make the project stronger?</label>
-              <textarea id="pulseText" name="pulseText" rows="4" placeholder="Example: Add a Q&A with an expert, or provide a bilingual summary." required></textarea>
-
-              <div class="pulse__actions">
-                <button class="btn btn--primary" type="submit">Create a summary</button>
-                <button class="btn btn--soft" type="button" id="pulseClear">Clear</button>
-              </div>
-
-              <div class="pulse__output" id="pulseOutput" hidden>
-                <div class="badge badge--soft">Summary (copy or screenshot as evidence)</div>
-                <p class="pulse__summary" id="pulseSummary"></p>
-              </div>
-
-              <div class="form-msg" id="pulseMsg" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REFLECTION -->
-    <section id="reflection" class="section">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Final reflection</h2>
-          <p class="section__subtitle">
-            A strong reflection shows leadership growth: what you learned, what changed, and what you will do next.
-            Replace the bracketed lines with your real reflections and outcomes.
-          </p>
-        </header>
-
-        <div class="grid grid--cards">
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Main lessons learned</h3>
-            <p class="card__text">
-              We learned that leadership is not only confidence—it is consistency, empathy, and responsibility.
-              We improved our planning, communication, and our ability to respond to feedback.
-            </p>
-            <p class="card__hint">[Insert 2–4 real lessons learned from your project]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">What changed</h3>
-            <p class="card__text">
-              Change can be small but real: a new conversation, increased awareness, more people knowing where to get help, or improved classroom climate.
-              We documented change through feedback and evidence logs.
-            </p>
-            <p class="card__hint">[Insert the change you observed and how you know]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Future plans</h3>
-            <p class="card__text">
-              Our next step is to maintain the work: hand over resources, schedule continuing sessions, and expand collaboration.
-              We want the project to outlast the SLC timeline.
-            </p>
-            <p class="card__hint">[Insert your next steps, timeline, and what success looks like]</p>
-          </article>
-
-          <article class="card reveal" data-reveal>
-            <h3 class="card__title">Why this project mattered</h3>
-            <p class="card__text">
-              This project mattered because it connected leadership with real community needs.
-              We practised respectful action and built evidence that our effort created value.
-            </p>
-            <p class="card__hint">[Insert a short concluding statement you can say in a presentation]</p>
-          </article>
-        </div>
-
-        <div class="callout reveal" data-reveal>
-          <div class="callout__icon" aria-hidden="true">
-            <svg class="icon" width="22" height="22" viewBox="0 0 24 24"><use href="#i-spark"></use></svg>
-          </div>
-          <div class="callout__content">
-            <h3 class="callout__title">Presentation tip</h3>
-            <p class="callout__text">
-              Pick one story where you made a decision, faced a challenge, adapted based on feedback, and achieved a result.
-              Those moments demonstrate leadership more strongly than a list of tasks.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REFERENCES + FEEDBACK FORM -->
-    <section id="references" class="section section--alt">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">References and contact</h2>
-          <p class="section__subtitle">
-            Add APA-style sources you used to understand the issue. Use the feedback form to collect messages during presentations (demo only — no data is sent anywhere).
-          </p>
-        </header>
-
-        <div class="refs-layout">
-          <div class="card reveal" data-reveal>
-            <h3 class="card__title">References (APA placeholders)</h3>
-            <ol class="refs">
-              <li>[Insert APA reference] — e.g. government report / NGO report / peer-reviewed article.</li>
-              <li>[Insert APA reference] — e.g. official statistics source.</li>
-              <li>[Insert APA reference] — e.g. educational resource.</li>
-              <li>[Insert APA reference] — e.g. interview guidelines or safeguarding policy.</li>
-            </ol>
-            <p class="card__hint">Tip: Keep sources credible and Kazakhstan-relevant where possible.</p>
-
-            <div class="social">
-              <a class="social__link" href="#" data-placeholder-link="true" aria-label="Placeholder link: Instagram">
-                Instagram
-              </a>
-              <a class="social__link" href="#" data-placeholder-link="true" aria-label="Placeholder link: TikTok">
-                TikTok
-              </a>
-              <a class="social__link" href="#" data-placeholder-link="true" aria-label="Placeholder link: Project Drive/Folder">
-                Project folder
-              </a>
-              <a class="social__link" href="mailto:[Insert email]" aria-label="Email link placeholder">
-                Email
+              <a class="btn full" href="#checkin" data-link>
+                <span class="btn-ic" aria-hidden="true">➜</span>
+                Personalise my guide
               </a>
             </div>
           </div>
 
-          <div class="card reveal" data-reveal>
-            <div class="card__header">
-              <h3 class="card__title">Feedback form</h3>
-              <span class="badge badge--soft">Validated on-device</span>
-            </div>
-
-            <form id="feedbackForm" class="form" novalidate>
-              <div class="form__row">
-                <div class="field">
-                  <label class="label" for="name">Name</label>
-                  <input id="name" name="name" type="text" autocomplete="name" placeholder="Example: Amina S." required minlength="2" />
-                  <small class="error" id="err-name" aria-live="polite"></small>
+          <div class="panel card-back">
+            <div class="card-back-inner">
+              <div class="card-back-title">MONEY TALKS</div>
+              <div class="card-back-sub">♠ ♥ ♦ ♣</div>
+              <p class="card-back-copy">
+                Every financial habit hides a pattern. Some build your future — others quietly drain it.
+                Turn a card to discover lessons that could change how you handle money forever.
+              </p>
+              <div class="card-back-meta">
+                <div class="meta-chip">
+                  <span class="meta-k">Event completed</span>
+                  <span class="meta-v">Psychology Meeting</span>
                 </div>
-
-                <div class="field">
-                  <label class="label" for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" placeholder="example@school.kz" required />
-                  <small class="error" id="err-email" aria-live="polite"></small>
+                <div class="meta-chip">
+                  <span class="meta-k">Location</span>
+                  <span class="meta-v">Center for Preparatory Studies</span>
+                </div>
+                <div class="meta-chip">
+                  <span class="meta-k">Date</span>
+                  <span class="meta-v">20/03/2026</span>
                 </div>
               </div>
+              <a class="link-row" href="#cards" data-link>
+                <span>Draw a card</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-              <div class="form__row">
-                <div class="field">
-                  <label class="label" for="role">Your role</label>
-                  <select id="role" name="role" required>
-                    <option value="" selected disabled>Select one</option>
-                    <option value="student">Student</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="parent">Parent/guardian</option>
-                    <option value="partner">Partner organisation</option>
-                    <option value="other">Other</option>
+      <div class="container">
+        <div class="micro-bar" role="note" aria-label="Tip">
+          <span class="micro-ic" aria-hidden="true">💡</span>
+          Tip: This site works offline. Your progress saves to your browser (local storage).
+        </div>
+      </div>
+    </section>
+
+    <section id="checkin" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Your 3‑minute check‑in</h2>
+          <p class="muted">
+            Get a personalised path (topics + tools + actions). No sign‑ups. No judgement.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <form id="checkinForm" class="form" autocomplete="on">
+              <div class="form-row">
+                <label class="field">
+                  <span class="label">Age range</span>
+                  <select name="age" required>
+                    <option value="" selected disabled>Choose…</option>
+                    <option value="16-18">16–18</option>
+                    <option value="19-22">19–22</option>
+                    <option value="23-27">23–27</option>
+                    <option value="28+">28+</option>
                   </select>
-                  <small class="error" id="err-role" aria-live="polite"></small>
-                </div>
+                </label>
 
-                <div class="field">
-                  <label class="label" for="topic">Topic</label>
-                  <select id="topic" name="topic" required>
-                    <option value="" selected disabled>Select one</option>
-                    <option value="impact">Impact / results</option>
-                    <option value="collab">Collaboration</option>
-                    <option value="resources">Resources / content</option>
-                    <option value="safety">Safety / responsibility</option>
-                    <option value="other">Other</option>
+                <label class="field">
+                  <span class="label">Currency</span>
+                  <select name="currency" required>
+                    <option value="KZT" selected>KZT (₸)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
                   </select>
-                  <small class="error" id="err-topic" aria-live="polite"></small>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label class="field">
+                  <span class="label">Your biggest struggle right now</span>
+                  <select name="struggle" required>
+                    <option value="" selected disabled>Choose…</option>
+                    <option value="spender">Impulse spending / lifestyle creep</option>
+                    <option value="gambler">Risky bets / gambling / “get rich quick”</option>
+                    <option value="borrower">Debt / credit / buy‑now‑pay‑later</option>
+                    <option value="scam">Scams / fraud / pyramid schemes</option>
+                    <option value="saver">Saving feels impossible</option>
+                    <option value="planner">No plan / don’t know where it goes</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label class="field">
+                  <span class="label">Your main goal (next 30 days)</span>
+                  <select name="goal" required>
+                    <option value="" selected disabled>Choose…</option>
+                    <option value="budget">Build a budget I can follow</option>
+                    <option value="save">Start saving (even small)</option>
+                    <option value="debt">Start paying down debt</option>
+                    <option value="safety">Avoid scams & protect my accounts</option>
+                    <option value="invest">Learn investing basics safely</option>
+                    <option value="habits">Build better money habits</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label class="field">
+                  <span class="label">Monthly take‑home income (optional)</span>
+                  <input name="income" type="number" inputmode="decimal" min="0" step="1" placeholder="e.g., 250000" />
+                </label>
+              </div>
+
+              <div class="form-row">
+                <button class="btn primary" type="submit">
+                  <span class="btn-ic" aria-hidden="true">✨</span>
+                  Build my path
+                </button>
+                <button class="btn ghost" type="button" id="prefillDemo">
+                  Prefill example
+                </button>
+              </div>
+
+              <div class="micro-note">
+                This is education, not financial advice. If you’re in immediate danger or crisis, contact local emergency services.
+              </div>
+            </form>
+          </div>
+
+          <div class="card" id="checkinResultCard" aria-live="polite">
+            <div class="card-head">
+              <h3 class="h3">Your personalised path</h3>
+              <div class="pill chip" id="personaChip">Not generated yet</div>
+            </div>
+
+            <div class="card-body" id="checkinResult">
+              <p class="muted">Complete the check‑in to generate your next steps.</p>
+            </div>
+
+            <div class="card-foot split">
+              <button class="btn small" id="savePath" type="button" disabled>Save path</button>
+              <button class="btn small ghost" id="sharePath" type="button" disabled>Copy summary</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Learn in bite‑size lessons</h2>
+          <p class="muted">
+            Short modules with practical actions. Mark lessons as completed to track progress.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <div class="search">
+            <span class="search-ic" aria-hidden="true">⌕</span>
+            <input id="learnSearch" type="search" placeholder="Search topics (budget, debt, scam, gambling…)"/>
+          </div>
+          <div class="toolbar-right">
+            <button class="btn small" id="openQuiz" type="button">
+              <span class="btn-ic" aria-hidden="true">🧠</span>
+              Take a quick quiz
+            </button>
+            <button class="btn small ghost" id="markAllLessonsRead" type="button">Mark all as read (demo)</button>
+          </div>
+        </div>
+
+        <div class="learn-grid" id="learnGrid" aria-label="Learning modules"></div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Tools you can actually use</h2>
+          <p class="muted">
+            Budget builder, emergency fund target, debt payoff simulator, compound growth, and scam shield.
+          </p>
+        </div>
+
+        <div class="tools-shell">
+          <div class="tabs" role="tablist" aria-label="Tools">
+            <button class="tab" role="tab" aria-selected="true" aria-controls="toolPanel" id="tab-budget" data-tool="budget">Budget</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-emergency" data-tool="emergency">Emergency fund</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-debt" data-tool="debt">Debt payoff</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-growth" data-tool="growth">Compound growth</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="toolPanel" id="tab-scam" data-tool="scam">Scam shield</button>
+          </div>
+
+          <div class="tool-panel card" id="toolPanel" role="tabpanel" aria-labelledby="tab-budget"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cards" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Money Talks card deck</h2>
+          <p class="muted">
+            Choose a card to reveal a pattern — then take one concrete action today.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">Draw a card</h3>
+              <div class="pill chip">Interactive</div>
+            </div>
+
+            <div class="card-body">
+              <div class="deck">
+                <div class="deck-stack" aria-hidden="true">
+                  <div class="deck-card back"></div>
+                  <div class="deck-card back"></div>
+                  <div class="deck-card back"></div>
+                </div>
+                <div class="deck-actions">
+                  <button class="btn primary" id="drawCard" type="button">
+                    <span class="btn-ic" aria-hidden="true">🂠</span>
+                    Shuffle & draw
+                  </button>
+                  <button class="btn" id="viewAllCards" type="button">
+                    <span class="btn-ic" aria-hidden="true">🃏</span>
+                    Browse all cards
+                  </button>
+                  <button class="btn ghost" id="dailyCard" type="button">
+                    <span class="btn-ic" aria-hidden="true">☀</span>
+                    Daily card
+                  </button>
                 </div>
               </div>
 
-              <div class="field">
-                <label class="label" for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your feedback. If you mention private details, ensure you have permission." required minlength="20"></textarea>
-                <small class="error" id="err-message" aria-live="polite"></small>
+              <div class="micro-note">
+                Tip: In the card view, double‑tap / double‑click the title to jump to the next section.
               </div>
+            </div>
+          </div>
 
-              <label class="checkbox">
-                <input type="checkbox" id="consent" name="consent" required />
-                <span>I understand this is a demo form (no submission). I can copy my message and send it through approved school channels.</span>
-              </label>
-              <small class="error" id="err-consent" aria-live="polite"></small>
-
-              <div class="form__actions">
-                <button class="btn btn--primary" type="submit">Validate &amp; save confirmation</button>
-                <button class="btn btn--soft" type="button" id="clearForm">Clear</button>
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">Saved cards</h3>
+              <div class="pill chip" id="savedCount">0</div>
+            </div>
+            <div class="card-body">
+              <div class="empty-state" id="savedEmpty">
+                <p class="muted">Save a card to keep it here.</p>
               </div>
+              <div class="mini-list" id="savedList" aria-label="Saved cards list"></div>
+            </div>
+            <div class="card-foot split">
+              <button class="btn small ghost" id="exportData" type="button">Export data</button>
+              <button class="btn small" id="importData" type="button">Import data</button>
+              <input id="importFile" type="file" accept="application/json" hidden />
+            </div>
+          </div>
+        </div>
 
-              <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
-            </form>
+        <div class="subhead-row">
+          <h3 class="h3">All cards</h3>
+          <div class="muted">Knowledge is the strongest hand you can play.</div>
+        </div>
+        <div class="cards-grid" id="cardsGrid" aria-label="All Money Talks cards"></div>
+      </div>
+    </section>
+
+    <section id="plan" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Your 7‑Day Money Reset</h2>
+          <p class="muted">
+            A simple plan designed for students and young adults. Tiny actions, real momentum.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">The plan</h3>
+              <div class="pill chip" id="planProgressChip">0/7</div>
+            </div>
+            <div class="card-body">
+              <div class="plan" id="planList" aria-label="7-Day plan list"></div>
+            </div>
+            <div class="card-foot split">
+              <button class="btn small" id="planMarkAll" type="button">Mark all done</button>
+              <button class="btn small ghost" id="planReset" type="button">Reset plan</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">Make it yours</h3>
+              <div class="pill chip">Custom</div>
+            </div>
+            <div class="card-body">
+              <form class="form" id="planCustomForm">
+                <label class="field">
+                  <span class="label">Focus this week</span>
+                  <select name="focus">
+                    <option value="balanced" selected>Balanced</option>
+                    <option value="save">Saving</option>
+                    <option value="debt">Debt</option>
+                    <option value="safety">Safety & scams</option>
+                    <option value="habits">Habits & planning</option>
+                    <option value="risk">Gambling & risky bets</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="label">Minutes per day you can commit</span>
+                  <input name="minutes" type="range" min="5" max="45" step="5" value="10" />
+                  <span class="range-val" id="planMinutesVal">10 min/day</span>
+                </label>
+
+                <button class="btn primary" type="submit">
+                  <span class="btn-ic" aria-hidden="true">↻</span>
+                  Rebuild plan
+                </button>
+              </form>
+
+              <div class="micro-note">
+                Progress saves automatically. Perfect is not required — consistency is.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our SLC project journey</h2>
+          <p class="muted">
+            Built around “Money Talks” to raise awareness of financial illiteracy and gambling addiction. Explore what we’ve done and what we can include next.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">Challenges completed</h3>
+              <div class="pill chip">1–7</div>
+            </div>
+            <div class="card-body">
+              <div class="timeline" id="slcTimeline" aria-label="SLC challenges timeline"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">What to include in the “guide”</h3>
+              <div class="pill chip">Ideas</div>
+            </div>
+            <div class="card-body">
+              <p class="muted">
+                Turn your project into a lasting guide by adding modules, tools, and community actions.
+                Tick items to create your roadmap for Challenges 8–10.
+              </p>
+              <div class="checklist" id="guideIdeas" aria-label="Guide content ideas checklist"></div>
+            </div>
+            <div class="card-foot split">
+              <button class="btn small" id="ideasCopy" type="button">Copy roadmap</button>
+              <button class="btn small ghost" id="ideasReset" type="button">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Resources & safety notes</h2>
+          <p class="muted">
+            Learn more from reputable sources and know what to do if something feels off.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">Credible learning links</h3>
+              <div class="pill chip">External</div>
+            </div>
+            <div class="card-body" id="resourceLinks"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3 class="h3">If gambling is becoming a problem</h3>
+              <div class="pill chip warn">Support</div>
+            </div>
+            <div class="card-body">
+              <div class="callout warn">
+                <strong>Important:</strong> If you feel out of control, you’re not “weak” — you’re human. Talk to someone you trust and reach out for professional support if you can.
+              </div>
+              <ul class="tick-list">
+                <li>Pause: move money away from “easy access” (remove saved card details, limit apps).</li>
+                <li>Track losses honestly (numbers reduce denial).</li>
+                <li>Replace the “thrill” with a healthier challenge (sport, learning, building, community).</li>
+                <li>If you’re in immediate danger or crisis, contact local emergency services.</li>
+              </ul>
+              <div class="micro-note">
+                This site provides education and habit tools. It does not diagnose or treat addiction.
+              </div>
+            </div>
           </div>
         </div>
 
         <footer class="footer">
-          <div class="footer__left">
-            <div class="brand brand--footer">
-              <span class="brand__mark" aria-hidden="true">SLC</span>
-              <span class="brand__text">
-                <span class="brand__title">Student Leadership Challenge</span>
-                <span class="brand__subtitle" id="footerSubtitle">Built with plain HTML/CSS/JS</span>
-              </span>
+          <div class="footer-inner">
+            <div class="footer-left">
+              <div class="footer-title">Money Talks</div>
+              <div class="footer-muted">A student-led guide for financial literacy (SLC project).</div>
             </div>
-            <p class="footer__note">
-              © <span id="year"></span> <span data-bind="teamName">[INSERT TEAM NAME]</span>. All evidence and media should be used with permission.
-              <span class="footer__stamp">Last opened: <span id="lastOpened">—</span></span>
-            </p>
-          </div>
-
-          <div class="footer__right">
-            <a class="btn btn--soft" href="#home">Back to hero</a>
+            <div class="footer-right">
+              <a class="link" href="#top" data-link>Back to top</a>
+              <button class="link-btn" id="openChangelog" type="button">What’s inside?</button>
+            </div>
           </div>
         </footer>
       </div>
     </section>
   </main>
 
-  <!-- Gallery modal -->
-  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalCaption" hidden>
-    <div class="modal__overlay" data-modal-close></div>
-
-    <div class="modal__panel" role="document">
-      <div class="modal__header">
-        <h3 class="modal__title" id="modalTitle">Evidence item</h3>
-        <button class="icon-btn" type="button" id="modalClose" data-modal-close aria-label="Close">
-          <span class="icon-btn__icon" aria-hidden="true">
-            <svg class="icon" width="20" height="20" viewBox="0 0 24 24"><use href="#i-close"></use></svg>
-          </span>
-          <span class="icon-btn__text">Close</span>
+  <dialog class="dialog" id="settingsDialog" aria-label="Settings">
+    <form method="dialog" class="dialog-inner">
+      <div class="dialog-head">
+        <h3 class="h3">Settings</h3>
+        <button class="icon-btn" type="submit" aria-label="Close">
+          <span class="icon close" aria-hidden="true"></span>
         </button>
       </div>
 
-      <div class="modal__body">
-        <div class="modal__preview" id="modalPreview" aria-hidden="true"></div>
-        <p class="modal__caption" id="modalCaption"></p>
-        <div class="modal__meta" id="modalMeta"></div>
+      <div class="dialog-body">
+        <div class="grid two">
+          <div class="card inset">
+            <h4 class="h4">Theme</h4>
+            <p class="muted">Choose light, dark, or follow system.</p>
+            <div class="seg" role="group" aria-label="Theme selection">
+              <button type="button" class="seg-btn" data-theme="system">System</button>
+              <button type="button" class="seg-btn" data-theme="light">Light</button>
+              <button type="button" class="seg-btn" data-theme="dark">Dark</button>
+            </div>
+          </div>
+
+          <div class="card inset">
+            <h4 class="h4">Text size</h4>
+            <p class="muted">Adjust readability (saved locally).</p>
+            <label class="field">
+              <span class="label">Scale</span>
+              <input id="textScale" type="range" min="90" max="120" step="5" value="100" />
+              <span class="range-val" id="textScaleVal">100%</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card inset">
+          <h4 class="h4">Data</h4>
+          <p class="muted">Export your progress or clear everything.</p>
+          <div class="row">
+            <button class="btn small" type="button" id="settingsExport">Export</button>
+            <button class="btn small" type="button" id="settingsImport">Import</button>
+            <button class="btn small danger" type="button" id="settingsClear">Clear all</button>
+          </div>
+        </div>
       </div>
 
-      <div class="modal__footer">
-        <button class="btn btn--soft" type="button" data-modal-close>Done</button>
+      <div class="dialog-foot">
+        <button class="btn" type="submit">Done</button>
       </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="lessonDialog" aria-label="Lesson">
+    <form method="dialog" class="dialog-inner dialog-wide">
+      <div class="dialog-head">
+        <h3 class="h3" id="lessonTitle">Lesson</h3>
+        <button class="icon-btn" type="submit" aria-label="Close">
+          <span class="icon close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="dialog-body" id="lessonBody"></div>
+      <div class="dialog-foot split">
+        <button class="btn ghost" type="button" id="lessonMarkDone">Mark lesson complete</button>
+        <button class="btn" type="submit">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="quizDialog" aria-label="Quick quiz">
+    <form method="dialog" class="dialog-inner dialog-wide">
+      <div class="dialog-head">
+        <h3 class="h3">Quick quiz</h3>
+        <button class="icon-btn" type="submit" aria-label="Close">
+          <span class="icon close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="dialog-body" id="quizBody"></div>
+      <div class="dialog-foot split">
+        <button class="btn ghost" type="button" id="quizReset">Restart</button>
+        <button class="btn" type="submit">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="cardDialog" aria-label="Money Talks card">
+    <form method="dialog" class="dialog-inner dialog-wide">
+      <div class="dialog-head">
+        <div class="dialog-head-left">
+          <div class="pill chip" id="cardBadge">Card</div>
+          <h3 class="h3 card-title" id="cardTitle">Card</h3>
+          <div class="muted" id="cardQuote"></div>
+        </div>
+        <button class="icon-btn" type="submit" aria-label="Close">
+          <span class="icon close" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="dialog-body scroll" id="cardBody"></div>
+
+      <div class="dialog-foot split">
+        <div class="row">
+          <button class="btn small ghost" type="button" id="cardPrev">← Prev</button>
+          <button class="btn small ghost" type="button" id="cardNext">Next →</button>
+        </div>
+
+        <div class="row">
+          <button class="btn small" type="button" id="cardSave">Save</button>
+          <button class="btn small" type="button" id="downloadQuote">Download quote card</button>
+          <button class="btn small ghost" type="submit">Close</button>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="dialog" id="changelogDialog" aria-label="What’s inside">
+    <form method="dialog" class="dialog-inner">
+      <div class="dialog-head">
+        <h3 class="h3">What’s inside this website</h3>
+        <button class="icon-btn" type="submit" aria-label="Close">
+          <span class="icon close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="dialog-body">
+        <ul class="tick-list">
+          <li>Personalised check‑in (persona + next steps).</li>
+          <li>Bite‑size lessons with completion tracking.</li>
+          <li>Budget, emergency fund, debt payoff, compound growth tools.</li>
+          <li>Scam shield checklist with risk score.</li>
+          <li>Money Talks card deck with “Download quote card”.</li>
+          <li>7‑Day Money Reset plan.</li>
+          <li>SLC journey timeline + roadmap ideas for Challenges 8–10.</li>
+          <li>Everything saves locally and works offline.</li>
+        </ul>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn" type="submit">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <noscript>
+    <div class="noscript">
+      This site needs JavaScript to run. Please enable JavaScript and reload.
     </div>
-  </div>
+  </noscript>
 
-  <!-- Toast -->
-  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
-    <div class="toast__content" id="toastText">Message</div>
-  </div>
-
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" hidden>
-    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
-    <span class="back-to-top__text">Top</span>
-  </button>
+  <script src="script.js"></script>
 </body>
 </html>
